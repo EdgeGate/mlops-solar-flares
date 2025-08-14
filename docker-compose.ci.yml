@@ -26,8 +26,8 @@ services:
       - "5000:5000"
 
   api:
-    image: ${API_IMAGE:-local/solar-flares-api:test}  # défaut si la variable est absente
-    build:                                           # -> Compose sait construire si l’image n’existe pas
+    image: ${API_IMAGE:-local/solar-flares-api:test}
+    build:
       context: ./api
       dockerfile: Dockerfile
     environment:
