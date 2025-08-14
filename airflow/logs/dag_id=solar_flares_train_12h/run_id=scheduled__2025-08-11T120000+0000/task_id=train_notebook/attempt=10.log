@@ -1,0 +1,134 @@
+[2025-08-12T12:00:23.384+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T12:00:23.415+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T12:00:23.421+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T12:00:23.421+0000] {taskinstance.py:2306} INFO - Starting attempt 10 of 11
+[2025-08-12T12:00:23.431+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-11 12:00:00+00:00
+[2025-08-12T12:00:23.439+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpk922wta0']
+[2025-08-12T12:00:23.441+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2135) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T12:00:23.441+0000] {standard_task_runner.py:91} INFO - Job 118: Subtask train_notebook
+[2025-08-12T12:00:23.441+0000] {standard_task_runner.py:63} INFO - Started process 2136 to run task
+[2025-08-12T12:00:23.490+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T12:00:23.564+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='10' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T12:00:23.565+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T12:00:23.576+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T12:00:23.578+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nmkdir -p /opt/project/notebooks/runs\ncd /opt/project/notebooks\nOUT="ml_x_ray_sensor_run_20250811T120000.ipynb"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$OUT"\necho "Notebook exécuté -> $OUT"']
+[2025-08-12T12:00:23.588+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T12:00:24.724+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-12T12:00:24.725+0000] {subprocess.py:93} INFO - Output Notebook: ml_x_ray_sensor_run_20250811T120000.ipynb
+[2025-08-12T12:00:26.404+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/22 [00:00<?, ?cell/s]Executing notebook with kernel: ***
+[2025-08-12T12:00:30.997+0000] {subprocess.py:93} INFO - Executing:   5%|▍         | 1/22 [00:01<00:34,  1.65s/cell]Executing:   9%|▉         | 2/22 [00:04<00:51,  2.56s/cell]Executing:  14%|█▎        | 3/22 [00:05<00:29,  1.56s/cell]Executing:  14%|█▎        | 3/22 [00:06<00:39,  2.08s/cell]
+[2025-08-12T12:00:31.008+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:00:31.008+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 198, in _run_module_as_main
+[2025-08-12T12:00:31.008+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 88, in _run_code
+[2025-08-12T12:00:31.009+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/__main__.py", line 4, in <module>
+[2025-08-12T12:00:31.009+0000] {subprocess.py:93} INFO -     papermill()
+[2025-08-12T12:00:31.009+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2025-08-12T12:00:31.010+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-08-12T12:00:31.010+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:00:31.010+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2025-08-12T12:00:31.010+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-08-12T12:00:31.011+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2025-08-12T12:00:31.011+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2025-08-12T12:00:31.011+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-08-12T12:00:31.011+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:00:31.012+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2025-08-12T12:00:31.012+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-08-12T12:00:31.012+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:00:31.013+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2025-08-12T12:00:31.013+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-08-12T12:00:31.013+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:00:31.013+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2025-08-12T12:00:31.014+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2025-08-12T12:00:31.014+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2025-08-12T12:00:31.015+0000] {subprocess.py:93} INFO -     raise_for_execution_errors(nb, output_path)
+[2025-08-12T12:00:31.015+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2025-08-12T12:00:31.015+0000] {subprocess.py:93} INFO -     raise error
+[2025-08-12T12:00:31.016+0000] {subprocess.py:93} INFO - papermill.exceptions.PapermillExecutionError:
+[2025-08-12T12:00:31.016+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T12:00:31.016+0000] {subprocess.py:93} INFO - Exception encountered at "In [2]":
+[2025-08-12T12:00:31.016+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T12:00:31.017+0000] {subprocess.py:93} INFO - FileNotFoundError                         Traceback (most recent call last)
+[2025-08-12T12:00:31.017+0000] {subprocess.py:93} INFO - Cell In[2], line 5
+[2025-08-12T12:00:31.017+0000] {subprocess.py:93} INFO -       3 parquet_path = Path(r"C:\Users\gate\Documents\Jedha\Projet\4\mlops-solar-flares\data\xrs_clean.parquet")
+[2025-08-12T12:00:31.017+0000] {subprocess.py:93} INFO -       4 df = parquet_path
+[2025-08-12T12:00:31.018+0000] {subprocess.py:93} INFO - ----> 5 df = pd.read_parquet(parquet_path, engine="pyarrow")
+[2025-08-12T12:00:31.018+0000] {subprocess.py:93} INFO -       6 print(f"✅ Données chargées : {df.shape[0]} lignes, {df.shape[1]} colonnes")
+[2025-08-12T12:00:31.019+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.019+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/pandas/io/parquet.py:670, in read_parquet(path, engine, columns, storage_options, use_nullable_dtypes, dtype_backend, filesystem, filters, **kwargs)
+[2025-08-12T12:00:31.020+0000] {subprocess.py:93} INFO -     667     use_nullable_dtypes = False
+[2025-08-12T12:00:31.020+0000] {subprocess.py:93} INFO -     668 check_dtype_backend(dtype_backend)
+[2025-08-12T12:00:31.021+0000] {subprocess.py:93} INFO - --> 670 return impl.read(
+[2025-08-12T12:00:31.021+0000] {subprocess.py:93} INFO -     671     path,
+[2025-08-12T12:00:31.021+0000] {subprocess.py:93} INFO -     672     columns=columns,
+[2025-08-12T12:00:31.022+0000] {subprocess.py:93} INFO -     673     filters=filters,
+[2025-08-12T12:00:31.022+0000] {subprocess.py:93} INFO -     674     storage_options=storage_options,
+[2025-08-12T12:00:31.022+0000] {subprocess.py:93} INFO -     675     use_nullable_dtypes=use_nullable_dtypes,
+[2025-08-12T12:00:31.022+0000] {subprocess.py:93} INFO -     676     dtype_backend=dtype_backend,
+[2025-08-12T12:00:31.023+0000] {subprocess.py:93} INFO -     677     filesystem=filesystem,
+[2025-08-12T12:00:31.023+0000] {subprocess.py:93} INFO -     678     **kwargs,
+[2025-08-12T12:00:31.023+0000] {subprocess.py:93} INFO -     679 )
+[2025-08-12T12:00:31.023+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.024+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/pandas/io/parquet.py:265, in PyArrowImpl.read(self, path, columns, filters, use_nullable_dtypes, dtype_backend, storage_options, filesystem, **kwargs)
+[2025-08-12T12:00:31.024+0000] {subprocess.py:93} INFO -     262 if manager == "array":
+[2025-08-12T12:00:31.024+0000] {subprocess.py:93} INFO -     263     to_pandas_kwargs["split_blocks"] = True  # type: ignore[assignment]
+[2025-08-12T12:00:31.025+0000] {subprocess.py:93} INFO - --> 265 path_or_handle, handles, filesystem = _get_path_or_handle(
+[2025-08-12T12:00:31.025+0000] {subprocess.py:93} INFO -     266     path,
+[2025-08-12T12:00:31.025+0000] {subprocess.py:93} INFO -     267     filesystem,
+[2025-08-12T12:00:31.025+0000] {subprocess.py:93} INFO -     268     storage_options=storage_options,
+[2025-08-12T12:00:31.026+0000] {subprocess.py:93} INFO -     269     mode="rb",
+[2025-08-12T12:00:31.026+0000] {subprocess.py:93} INFO -     270 )
+[2025-08-12T12:00:31.026+0000] {subprocess.py:93} INFO -     271 try:
+[2025-08-12T12:00:31.027+0000] {subprocess.py:93} INFO -     272     pa_table = self.api.parquet.read_table(
+[2025-08-12T12:00:31.027+0000] {subprocess.py:93} INFO -     273         path_or_handle,
+[2025-08-12T12:00:31.027+0000] {subprocess.py:93} INFO -     274         columns=columns,
+[2025-08-12T12:00:31.027+0000] {subprocess.py:93} INFO -    (...)    277         **kwargs,
+[2025-08-12T12:00:31.028+0000] {subprocess.py:93} INFO -     278     )
+[2025-08-12T12:00:31.028+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.028+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/pandas/io/parquet.py:139, in _get_path_or_handle(path, fs, storage_options, mode, is_dir)
+[2025-08-12T12:00:31.029+0000] {subprocess.py:93} INFO -     129 handles = None
+[2025-08-12T12:00:31.029+0000] {subprocess.py:93} INFO -     130 if (
+[2025-08-12T12:00:31.029+0000] {subprocess.py:93} INFO -     131     not fs
+[2025-08-12T12:00:31.030+0000] {subprocess.py:93} INFO -     132     and not is_dir
+[2025-08-12T12:00:31.030+0000] {subprocess.py:93} INFO -    (...)    137     # fsspec resources can also point to directories
+[2025-08-12T12:00:31.030+0000] {subprocess.py:93} INFO -     138     # this branch is used for example when reading from non-fsspec URLs
+[2025-08-12T12:00:31.031+0000] {subprocess.py:93} INFO - --> 139     handles = get_handle(
+[2025-08-12T12:00:31.031+0000] {subprocess.py:93} INFO -     140         path_or_handle, mode, is_text=False, storage_options=storage_options
+[2025-08-12T12:00:31.031+0000] {subprocess.py:93} INFO -     141     )
+[2025-08-12T12:00:31.031+0000] {subprocess.py:93} INFO -     142     fs = None
+[2025-08-12T12:00:31.034+0000] {subprocess.py:93} INFO -     143     path_or_handle = handles.handle
+[2025-08-12T12:00:31.034+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.035+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/pandas/io/common.py:872, in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)
+[2025-08-12T12:00:31.035+0000] {subprocess.py:93} INFO -     863         handle = open(
+[2025-08-12T12:00:31.035+0000] {subprocess.py:93} INFO -     864             handle,
+[2025-08-12T12:00:31.036+0000] {subprocess.py:93} INFO -     865             ioargs.mode,
+[2025-08-12T12:00:31.036+0000] {subprocess.py:93} INFO -    (...)    868             newline="",
+[2025-08-12T12:00:31.036+0000] {subprocess.py:93} INFO -     869         )
+[2025-08-12T12:00:31.036+0000] {subprocess.py:93} INFO -     870     else:
+[2025-08-12T12:00:31.037+0000] {subprocess.py:93} INFO -     871         # Binary mode
+[2025-08-12T12:00:31.037+0000] {subprocess.py:93} INFO - --> 872         handle = open(handle, ioargs.mode)
+[2025-08-12T12:00:31.037+0000] {subprocess.py:93} INFO -     873     handles.append(handle)
+[2025-08-12T12:00:31.037+0000] {subprocess.py:93} INFO -     875 # Convert BytesIO or file objects passed with an encoding
+[2025-08-12T12:00:31.038+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.038+0000] {subprocess.py:93} INFO - FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\gate\\Documents\\Jedha\\Projet\\4\\mlops-solar-flares\\data\\xrs_clean.parquet'
+[2025-08-12T12:00:31.038+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:00:31.240+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T12:00:31.242+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T12:00:31.252+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T12:00:31.256+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T120023, end_date=20250812T120031
+[2025-08-12T12:00:31.266+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 118 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 2136)
+[2025-08-12T12:00:31.313+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T12:00:31.328+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T12:00:31.331+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

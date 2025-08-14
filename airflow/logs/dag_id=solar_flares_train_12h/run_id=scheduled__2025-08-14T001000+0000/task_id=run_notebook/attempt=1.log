@@ -1,0 +1,26 @@
+[2025-08-14T19:03:23.617+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T19:03:23.648+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.run_notebook scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:23.655+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.run_notebook scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:23.655+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-08-14T19:03:23.666+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_notebook> on 2025-08-14 00:10:00+00:00
+[2025-08-14T19:03:23.673+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'run_notebook', 'scheduled__2025-08-14T00:10:00+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmp2g0e_58_']
+[2025-08-14T19:03:23.676+0000] {standard_task_runner.py:91} INFO - Job 192: Subtask run_notebook
+[2025-08-14T19:03:23.676+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11048) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T19:03:23.677+0000] {standard_task_runner.py:63} INFO - Started process 11049 to run task
+[2025-08-14T19:03:23.723+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.run_notebook scheduled__2025-08-14T00:10:00+00:00 [running]> on host def4e694b617
+[2025-08-14T19:03:23.802+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='run_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-14T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-14T00:10:00+00:00'
+[2025-08-14T19:03:23.803+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T19:03:23.810+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-14T19:03:23.812+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -euo pipefail\ncd /opt/project/notebooks\nOUT="ml_x_ray_sensor_generated.ipynb"\nTMP="$(mktemp -p /tmp ml_x_tmp_XXXXXX.ipynb)"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$TMP"\nmv -f "$TMP" "$OUT"\necho "Notebook généré -> $OUT"']
+[2025-08-14T19:03:23.823+0000] {subprocess.py:86} INFO - Output:
+[2025-08-14T19:03:25.240+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-14T19:03:25.241+0000] {subprocess.py:93} INFO - Output Notebook: /tmp/ml_x_tmp_n3ZLJP.ipynb
+[2025-08-14T19:03:26.782+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/27 [00:00<?, ?cell/s]Executing notebook with kernel: ***
+[2025-08-14T19:04:27.121+0000] {subprocess.py:93} INFO - Executing:   4%|▎         | 1/27 [00:09<04:00,  9.25s/cell]Executing:   7%|▋         | 2/27 [00:09<01:37,  3.88s/cell]Executing:  15%|█▍        | 4/27 [00:09<00:34,  1.48s/cell]Executing:  22%|██▏       | 6/27 [00:10<00:20,  1.03cell/s]Executing:  26%|██▌       | 7/27 [00:10<00:15,  1.27cell/s]Executing:  30%|██▉       | 8/27 [00:10<00:12,  1.57cell/s]Executing:  41%|████      | 11/27 [00:11<00:05,  2.79cell/s]Executing:  52%|█████▏    | 14/27 [00:54<01:23,  6.39s/cell]Executing:  56%|█████▌    | 15/27 [00:54<01:03,  5.32s/cell]Executing:  63%|██████▎   | 17/27 [00:54<00:35,  3.59s/cell]Executing:  70%|███████   | 19/27 [00:54<00:20,  2.54s/cell]Executing:  74%|███████▍  | 20/27 [00:54<00:14,  2.09s/cell]Executing:  81%|████████▏ | 22/27 [00:56<00:07,  1.55s/cell]Executing:  89%|████████▉ | 24/27 [01:00<00:05,  1.81s/cell]Executing: 100%|██████████| 27/27 [01:01<00:00,  2.29s/cell]
+[2025-08-14T19:04:27.401+0000] {subprocess.py:93} INFO - Notebook généré -> ml_x_ray_sensor_generated.ipynb
+[2025-08-14T19:04:27.402+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-14T19:04:27.404+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T19:04:27.431+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=solar_flares_train_12h, task_id=run_notebook, run_id=scheduled__2025-08-14T00:10:00+00:00, execution_date=20250814T001000, start_date=20250814T190323, end_date=20250814T190427
+[2025-08-14T19:04:27.467+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T19:04:27.486+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T19:04:27.489+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

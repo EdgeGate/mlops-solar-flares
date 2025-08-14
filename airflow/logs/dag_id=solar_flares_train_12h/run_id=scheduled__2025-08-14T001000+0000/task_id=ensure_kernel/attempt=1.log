@@ -1,0 +1,23 @@
+[2025-08-14T19:03:21.188+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T19:03:21.221+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:21.228+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:21.229+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-08-14T19:03:21.240+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ensure_kernel> on 2025-08-14 00:10:00+00:00
+[2025-08-14T19:03:21.250+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'ensure_kernel', 'scheduled__2025-08-14T00:10:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpyyelj7x4']
+[2025-08-14T19:03:21.252+0000] {standard_task_runner.py:91} INFO - Job 191: Subtask ensure_kernel
+[2025-08-14T19:03:21.255+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11040) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T19:03:21.256+0000] {standard_task_runner.py:63} INFO - Started process 11041 to run task
+[2025-08-14T19:03:21.293+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-14T00:10:00+00:00 [running]> on host def4e694b617
+[2025-08-14T19:03:21.366+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='ensure_kernel' AIRFLOW_CTX_EXECUTION_DATE='2025-08-14T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-14T00:10:00+00:00'
+[2025-08-14T19:03:21.368+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T19:03:21.376+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-14T19:03:21.378+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nHOME=/home/***\npython -c "import ipykernel" 2>/dev/null || pip install --no-cache-dir ipykernel==6.29.5\npython -m ipykernel install --user --name *** --display-name \'Python 3 (Airflow)\'\nKDIR="$HOME/.local/share/jupyter/kernels/***"\nmkdir -p "$KDIR"\nPYBIN="$(command -v python)"\ncat > "$KDIR/kernel.json" <<JSON\n{"argv":["$PYBIN","-Xfrozen_modules=off","-m","ipykernel_launcher","-f","{connection_file}"],\n "display_name":"Python 3 (Airflow)","language":"python"}\nJSON\necho "Kernel *** ready: $KDIR"']
+[2025-08-14T19:03:21.388+0000] {subprocess.py:86} INFO - Output:
+[2025-08-14T19:03:22.579+0000] {subprocess.py:93} INFO - Installed kernelspec *** in /home/***/.local/share/jupyter/kernels/***
+[2025-08-14T19:03:22.668+0000] {subprocess.py:93} INFO - Kernel *** ready: /home/***/.local/share/jupyter/kernels/***
+[2025-08-14T19:03:22.669+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-14T19:03:22.670+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T19:03:22.695+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=solar_flares_train_12h, task_id=ensure_kernel, run_id=scheduled__2025-08-14T00:10:00+00:00, execution_date=20250814T001000, start_date=20250814T190321, end_date=20250814T190322
+[2025-08-14T19:03:22.712+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T19:03:22.734+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T19:03:22.737+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

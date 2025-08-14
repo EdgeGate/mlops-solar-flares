@@ -1,0 +1,155 @@
+[2025-08-12T12:21:49.874+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T12:21:49.927+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T12:21:49.933+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T12:21:49.934+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2025-08-12T12:21:49.945+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): mlflow_ping> on 2025-08-12 00:00:00+00:00
+[2025-08-12T12:21:49.954+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'mlflow_ping', 'scheduled__2025-08-12T00:00:00+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpbm1c2gmq']
+[2025-08-12T12:21:49.956+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2810) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T12:21:49.956+0000] {standard_task_runner.py:91} INFO - Job 122: Subtask mlflow_ping
+[2025-08-12T12:21:49.956+0000] {standard_task_runner.py:63} INFO - Started process 2811 to run task
+[2025-08-12T12:21:50.006+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-12T00:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T12:21:50.082+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='mlflow_ping' AIRFLOW_CTX_EXECUTION_DATE='2025-08-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-12T00:00:00+00:00'
+[2025-08-12T12:21:50.083+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T12:21:50.099+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T12:21:50.100+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "\npython - <<'PY'\nimport os, mlflow, time\nprint('URI:', os.getenv('MLFLOW_TRACKING_URI'))\nmlflow.set_tracking_uri(os.getenv('MLFLOW_TRACKING_URI'))\nwith mlflow.start_run(run_name='***-ping-' + time.strftime('%Y%m%d-%H%M%S')):\n    mlflow.log_param('ping','ok')\nprint('OK')\nPY"]
+[2025-08-12T12:21:50.114+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T12:21:52.191+0000] {subprocess.py:93} INFO - 2025/08/12 12:21:52 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-08-12T12:21:52.192+0000] {subprocess.py:93} INFO - The git executable must be specified in one of the following ways:
+[2025-08-12T12:21:52.192+0000] {subprocess.py:93} INFO -     - be included in your $PATH
+[2025-08-12T12:21:52.192+0000] {subprocess.py:93} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-08-12T12:21:52.193+0000] {subprocess.py:93} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-08-12T12:21:52.193+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:21:52.193+0000] {subprocess.py:93} INFO - All git commands will error until this is rectified.
+[2025-08-12T12:21:52.193+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:21:52.193+0000] {subprocess.py:93} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-08-12T12:21:52.194+0000] {subprocess.py:93} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-08-12T12:21:52.194+0000] {subprocess.py:93} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-08-12T12:21:52.194+0000] {subprocess.py:93} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-08-12T12:21:52.194+0000] {subprocess.py:93} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-08-12T12:21:52.195+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:21:52.195+0000] {subprocess.py:93} INFO - Example:
+[2025-08-12T12:21:52.195+0000] {subprocess.py:93} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-08-12T12:21:52.195+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.333+0000] {subprocess.py:93} INFO - URI: http://mlflow:5000
+[2025-08-12T12:22:58.334+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:22:58.334+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+[2025-08-12T12:22:58.334+0000] {subprocess.py:93} INFO -     sock = connection.create_connection(
+[2025-08-12T12:22:58.335+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.335+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+[2025-08-12T12:22:58.336+0000] {subprocess.py:93} INFO -     raise err
+[2025-08-12T12:22:58.336+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+[2025-08-12T12:22:58.336+0000] {subprocess.py:93} INFO -     sock.connect(sa)
+[2025-08-12T12:22:58.336+0000] {subprocess.py:93} INFO - ConnectionRefusedError: [Errno 111] Connection refused
+[2025-08-12T12:22:58.336+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.337+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2025-08-12T12:22:58.337+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.337+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:22:58.337+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+[2025-08-12T12:22:58.338+0000] {subprocess.py:93} INFO -     response = self._make_request(
+[2025-08-12T12:22:58.338+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.338+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 496, in _make_request
+[2025-08-12T12:22:58.338+0000] {subprocess.py:93} INFO -     conn.request(
+[2025-08-12T12:22:58.339+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 400, in request
+[2025-08-12T12:22:58.339+0000] {subprocess.py:93} INFO -     self.endheaders()
+[2025-08-12T12:22:58.339+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1331, in endheaders
+[2025-08-12T12:22:58.339+0000] {subprocess.py:93} INFO -     self._send_output(message_body, encode_chunked=encode_chunked)
+[2025-08-12T12:22:58.340+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1091, in _send_output
+[2025-08-12T12:22:58.340+0000] {subprocess.py:93} INFO -     self.send(msg)
+[2025-08-12T12:22:58.340+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/http/client.py", line 1035, in send
+[2025-08-12T12:22:58.340+0000] {subprocess.py:93} INFO -     self.connect()
+[2025-08-12T12:22:58.340+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 238, in connect
+[2025-08-12T12:22:58.341+0000] {subprocess.py:93} INFO -     self.sock = self._new_conn()
+[2025-08-12T12:22:58.341+0000] {subprocess.py:93} INFO -                 ^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.341+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+[2025-08-12T12:22:58.341+0000] {subprocess.py:93} INFO -     raise NewConnectionError(
+[2025-08-12T12:22:58.342+0000] {subprocess.py:93} INFO - urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7a7f207f46b0>: Failed to establish a new connection: [Errno 111] Connection refused
+[2025-08-12T12:22:58.342+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.342+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2025-08-12T12:22:58.342+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.343+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:22:58.343+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+[2025-08-12T12:22:58.343+0000] {subprocess.py:93} INFO -     resp = conn.urlopen(
+[2025-08-12T12:22:58.344+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-08-12T12:22:58.344+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 877, in urlopen
+[2025-08-12T12:22:58.344+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-08-12T12:22:58.345+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-08-12T12:22:58.345+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 877, in urlopen
+[2025-08-12T12:22:58.345+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-08-12T12:22:58.345+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-08-12T12:22:58.345+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 877, in urlopen
+[2025-08-12T12:22:58.346+0000] {subprocess.py:93} INFO -     return self.urlopen(
+[2025-08-12T12:22:58.346+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^
+[2025-08-12T12:22:58.346+0000] {subprocess.py:93} INFO -   [Previous line repeated 2 more times]
+[2025-08-12T12:22:58.346+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 847, in urlopen
+[2025-08-12T12:22:58.346+0000] {subprocess.py:93} INFO -     retries = retries.increment(
+[2025-08-12T12:22:58.347+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.347+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/urllib3/util/retry.py", line 515, in increment
+[2025-08-12T12:22:58.347+0000] {subprocess.py:93} INFO -     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[2025-08-12T12:22:58.347+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.347+0000] {subprocess.py:93} INFO - urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7f207f46b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-12T12:22:58.348+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.348+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2025-08-12T12:22:58.348+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.348+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:22:58.349+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 129, in http_request
+[2025-08-12T12:22:58.349+0000] {subprocess.py:93} INFO -     return _get_http_response_with_retries(
+[2025-08-12T12:22:58.349+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.350+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/utils/request_utils.py", line 237, in _get_http_response_with_retries
+[2025-08-12T12:22:58.350+0000] {subprocess.py:93} INFO -     return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+[2025-08-12T12:22:58.350+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.351+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+[2025-08-12T12:22:58.351+0000] {subprocess.py:93} INFO -     resp = self.send(prep, **send_kwargs)
+[2025-08-12T12:22:58.351+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.351+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+[2025-08-12T12:22:58.352+0000] {subprocess.py:93} INFO -     r = adapter.send(request, **kwargs)
+[2025-08-12T12:22:58.352+0000] {subprocess.py:93} INFO -         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.352+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+[2025-08-12T12:22:58.352+0000] {subprocess.py:93} INFO -     raise ConnectionError(e, request=request)
+[2025-08-12T12:22:58.352+0000] {subprocess.py:93} INFO - requests.exceptions.ConnectionError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7f207f46b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-12T12:22:58.353+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.353+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2025-08-12T12:22:58.353+0000] {subprocess.py:93} INFO - 
+[2025-08-12T12:22:58.353+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T12:22:58.353+0000] {subprocess.py:93} INFO -   File "<stdin>", line 4, in <module>
+[2025-08-12T12:22:58.354+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py", line 382, in start_run
+[2025-08-12T12:22:58.354+0000] {subprocess.py:93} INFO -     active_run_obj = client.create_run(
+[2025-08-12T12:22:58.354+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.354+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/tracking/client.py", line 393, in create_run
+[2025-08-12T12:22:58.354+0000] {subprocess.py:93} INFO -     return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+[2025-08-12T12:22:58.355+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.355+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py", line 165, in create_run
+[2025-08-12T12:22:58.355+0000] {subprocess.py:93} INFO -     return self.store.create_run(
+[2025-08-12T12:22:58.356+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.356+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 208, in create_run
+[2025-08-12T12:22:58.357+0000] {subprocess.py:93} INFO -     response_proto = self._call_endpoint(CreateRun, req_body)
+[2025-08-12T12:22:58.357+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.357+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py", line 81, in _call_endpoint
+[2025-08-12T12:22:58.357+0000] {subprocess.py:93} INFO -     return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+[2025-08-12T12:22:58.358+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.358+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 302, in call_endpoint
+[2025-08-12T12:22:58.358+0000] {subprocess.py:93} INFO -     response = http_request(**call_kwargs)
+[2025-08-12T12:22:58.358+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T12:22:58.359+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py", line 152, in http_request
+[2025-08-12T12:22:58.359+0000] {subprocess.py:93} INFO -     raise MlflowException(f"API request to {url} failed with exception {e}")
+[2025-08-12T12:22:58.359+0000] {subprocess.py:93} INFO - mlflow.exceptions.MlflowException: API request to http://mlflow:5000/api/2.0/mlflow/runs/create failed with exception HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/runs/create (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a7f207f46b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-12T12:22:58.578+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T12:22:58.579+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T12:22:58.590+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T12:22:58.595+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=mlflow_ping, run_id=scheduled__2025-08-12T00:00:00+00:00, execution_date=20250812T000000, start_date=20250812T122149, end_date=20250812T122258
+[2025-08-12T12:22:58.607+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 122 for task mlflow_ping (Bash command failed. The command returned a non-zero exit code 1.; 2811)
+[2025-08-12T12:22:58.627+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T12:22:58.646+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T12:22:58.649+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

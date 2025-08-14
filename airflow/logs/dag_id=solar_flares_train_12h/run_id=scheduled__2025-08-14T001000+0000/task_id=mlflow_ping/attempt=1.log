@@ -1,0 +1,22 @@
+[2025-08-14T19:03:16.914+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T19:03:16.999+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:17.007+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-14T00:10:00+00:00 [queued]>
+[2025-08-14T19:03:17.008+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-08-14T19:03:17.022+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): mlflow_ping> on 2025-08-14 00:10:00+00:00
+[2025-08-14T19:03:17.032+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'mlflow_ping', 'scheduled__2025-08-14T00:10:00+00:00', '--job-id', '190', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmp1rpsb5eq']
+[2025-08-14T19:03:17.034+0000] {standard_task_runner.py:91} INFO - Job 190: Subtask mlflow_ping
+[2025-08-14T19:03:17.038+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=11020) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T19:03:17.039+0000] {standard_task_runner.py:63} INFO - Started process 11021 to run task
+[2025-08-14T19:03:17.082+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-14T00:10:00+00:00 [running]> on host def4e694b617
+[2025-08-14T19:03:17.177+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='mlflow_ping' AIRFLOW_CTX_EXECUTION_DATE='2025-08-14T00:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-14T00:10:00+00:00'
+[2025-08-14T19:03:17.178+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T19:03:17.200+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-14T19:03:17.201+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\npython - <<\'PY\'\nimport os, mlflow\nfrom mlflow import MlflowClient\nmlflow.set_tracking_uri(os.getenv(\'MLFLOW_TRACKING_URI\'))\nname="solar-flares"\nclient = MlflowClient()\nexp = client.get_experiment_by_name(name)\nif exp is None:\n    client.create_experiment(name)\nprint("OK: experiment exists")\nPY']
+[2025-08-14T19:03:17.215+0000] {subprocess.py:86} INFO - Output:
+[2025-08-14T19:03:19.991+0000] {subprocess.py:93} INFO - OK: experiment exists
+[2025-08-14T19:03:20.224+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-14T19:03:20.226+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T19:03:20.255+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=solar_flares_train_12h, task_id=mlflow_ping, run_id=scheduled__2025-08-14T00:10:00+00:00, execution_date=20250814T001000, start_date=20250814T190316, end_date=20250814T190320
+[2025-08-14T19:03:20.300+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T19:03:20.326+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T19:03:20.328+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

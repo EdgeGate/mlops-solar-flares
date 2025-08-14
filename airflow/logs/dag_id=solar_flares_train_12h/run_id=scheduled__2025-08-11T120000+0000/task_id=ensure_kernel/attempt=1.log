@@ -1,0 +1,50 @@
+[2025-08-12T11:11:38.961+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T11:11:39.017+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:11:39.035+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:11:39.044+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-12T11:11:39.069+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ensure_kernel> on 2025-08-11 12:00:00+00:00
+[2025-08-12T11:11:39.085+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'ensure_kernel', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpywzsbfl8']
+[2025-08-12T11:11:39.091+0000] {standard_task_runner.py:91} INFO - Job 105: Subtask ensure_kernel
+[2025-08-12T11:11:39.091+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=808) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T11:11:39.092+0000] {standard_task_runner.py:63} INFO - Started process 809 to run task
+[2025-08-12T11:11:39.224+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.ensure_kernel scheduled__2025-08-11T12:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T11:11:39.350+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='ensure_kernel' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T11:11:39.354+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T11:11:39.372+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T11:11:39.375+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "\npython - <<'PY'\nimport sys, pkgutil, subprocess\n# installe ipykernel si absent\nif pkgutil.find_loader('ipykernel') is None:\n    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--no-cache-dir', 'ipykernel==6.29.5'])\n# (re)crée le kernelspec '***'\nsubprocess.check_call([sys.executable, '-m', 'ipykernel', 'install', '--user', '--name', '***', '--display-name', 'Python 3 (Airflow)'])\nprint('Kernel *** OK')\nPY"]
+[2025-08-12T11:11:39.391+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T11:11:39.557+0000] {subprocess.py:93} INFO - <stdin>:3: DeprecationWarning: 'pkgutil.find_loader' is deprecated and slated for removal in Python 3.14; use importlib.util.find_spec() instead
+[2025-08-12T11:11:39.558+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T11:11:39.559+0000] {subprocess.py:93} INFO -   File "<stdin>", line 4, in <module>
+[2025-08-12T11:11:39.559+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 408, in check_call
+[2025-08-12T11:11:39.560+0000] {subprocess.py:93} INFO -     retcode = call(*popenargs, **kwargs)
+[2025-08-12T11:11:39.560+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:11:39.561+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 389, in call
+[2025-08-12T11:11:39.561+0000] {subprocess.py:93} INFO -     with Popen(*popenargs, **kwargs) as p:
+[2025-08-12T11:11:39.562+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:11:39.562+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1026, in __init__
+[2025-08-12T11:11:39.563+0000] {subprocess.py:93} INFO -     self._execute_child(args, executable, preexec_fn, close_fds,
+[2025-08-12T11:11:39.563+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1955, in _execute_child
+[2025-08-12T11:11:39.564+0000] {subprocess.py:93} INFO -     raise child_exception_type(errno_num, err_msg, err_filename)
+[2025-08-12T11:11:39.564+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: ''
+[2025-08-12T11:11:39.567+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T11:11:39.569+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T11:11:39.585+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T11:11:39.591+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=ensure_kernel, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T111139, end_date=20250812T111139
+[2025-08-12T11:11:39.607+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 105 for task ensure_kernel (Bash command failed. The command returned a non-zero exit code 1.; 809)
+[2025-08-12T11:11:39.629+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T11:11:39.652+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T11:11:39.663+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

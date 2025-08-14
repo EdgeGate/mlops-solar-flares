@@ -1,0 +1,23 @@
+[2025-08-14T00:44:27.925+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T00:44:27.977+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_j2 scheduled__2025-08-13T12:00:00+00:00 [queued]>
+[2025-08-14T00:44:27.986+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_j2 scheduled__2025-08-13T12:00:00+00:00 [queued]>
+[2025-08-14T00:44:27.989+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-14T00:44:28.005+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): backfill_ncei_j2> on 2025-08-13 12:00:00+00:00
+[2025-08-14T00:44:28.016+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'backfill_ncei_j2', 'scheduled__2025-08-13T12:00:00+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmpf9rcby9y']
+[2025-08-14T00:44:28.019+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6588) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T00:44:28.020+0000] {standard_task_runner.py:91} INFO - Job 174: Subtask backfill_ncei_j2
+[2025-08-14T00:44:28.020+0000] {standard_task_runner.py:63} INFO - Started process 6589 to run task
+[2025-08-14T00:44:28.083+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.backfill_ncei_j2 scheduled__2025-08-13T12:00:00+00:00 [running]> on host def4e694b617
+[2025-08-14T00:44:28.211+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='backfill_ncei_j2' AIRFLOW_CTX_EXECUTION_DATE='2025-08-13T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-13T12:00:00+00:00'
+[2025-08-14T00:44:28.212+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T00:44:28.225+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-14T00:44:28.227+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/project/src/data/xrs_update.py --mode backfill --start 2025-08-11 --end 2025-08-11']
+[2025-08-14T00:44:28.241+0000] {subprocess.py:86} INFO - Output:
+[2025-08-14T00:44:32.450+0000] {subprocess.py:93} INFO - [WARN] Aucun fichier pour 2025-08-11 (NCEI listing vide et fallback SunPy sans résultat)
+[2025-08-14T00:44:32.451+0000] {subprocess.py:93} INFO - [DONE] backfill complete -> rows=0
+[2025-08-14T00:44:32.570+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-14T00:44:32.571+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T00:44:32.599+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=xrs_update_12h, task_id=backfill_ncei_j2, run_id=scheduled__2025-08-13T12:00:00+00:00, execution_date=20250813T120000, start_date=20250814T004427, end_date=20250814T004432
+[2025-08-14T00:44:32.648+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T00:44:32.674+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T00:44:32.677+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

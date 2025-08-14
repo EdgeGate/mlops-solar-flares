@@ -1,0 +1,156 @@
+[2025-08-12T11:17:16.229+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T11:17:16.275+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:17:16.284+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:17:16.286+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 5
+[2025-08-12T11:17:16.301+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-11 12:00:00+00:00
+[2025-08-12T11:17:16.312+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '107', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpas8f3qtm']
+[2025-08-12T11:17:16.315+0000] {standard_task_runner.py:91} INFO - Job 107: Subtask train_notebook
+[2025-08-12T11:17:16.316+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=955) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T11:17:16.317+0000] {standard_task_runner.py:63} INFO - Started process 956 to run task
+[2025-08-12T11:17:16.386+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T11:17:16.508+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T11:17:16.509+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T11:17:16.525+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T11:17:16.527+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nexport PATH="$HOME/.local/bin:$PATH"\nmkdir -p /opt/project/notebooks/runs\ncd /opt/project/notebooks\nOUT="ml_x_ray_sensor_run_20250811T120000.ipynb"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$OUT"\necho "Notebook exécuté -> $OUT"']
+[2025-08-12T11:17:16.543+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T11:17:20.394+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-12T11:17:20.395+0000] {subprocess.py:93} INFO - Output Notebook: ml_x_ray_sensor_run_20250811T120000.ipynb
+[2025-08-12T11:17:20.975+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/21 [00:00<?, ?cell/s]Failed to run command:
+[2025-08-12T11:17:20.976+0000] {subprocess.py:93} INFO - ['', '-Xfrozen_modules=off', '-m', 'ipykernel_launcher', '-f', '/tmp/tmpx0zcu_o5.json']
+[2025-08-12T11:17:20.977+0000] {subprocess.py:93} INFO -     PATH='/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:.'
+[2025-08-12T11:17:20.977+0000] {subprocess.py:93} INFO -     with kwargs:
+[2025-08-12T11:17:20.978+0000] {subprocess.py:93} INFO - {'stdin': -1, 'stdout': None, 'stderr': None, 'cwd': None, 'start_new_session': True}
+[2025-08-12T11:17:20.978+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:17:20.978+0000] {subprocess.py:93} INFO - [Errno 13] Permission denied: ''
+[2025-08-12T11:17:20.979+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T11:17:20.979+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+[2025-08-12T11:17:20.980+0000] {subprocess.py:93} INFO -     asyncio.get_running_loop()
+[2025-08-12T11:17:20.980+0000] {subprocess.py:93} INFO - RuntimeError: no running event loop
+[2025-08-12T11:17:20.981+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:17:20.981+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2025-08-12T11:17:20.982+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:17:20.982+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T11:17:20.983+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 87, in wrapper
+[2025-08-12T11:17:20.983+0000] {subprocess.py:93} INFO -     out = await method(self, *args, **kwargs)
+[2025-08-12T11:17:20.983+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:20.984+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 439, in _async_start_kernel
+[2025-08-12T11:17:20.984+0000] {subprocess.py:93} INFO -     await self._async_launch_kernel(kernel_cmd, **kw)
+[2025-08-12T11:17:20.985+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 354, in _async_launch_kernel
+[2025-08-12T11:17:20.985+0000] {subprocess.py:93} INFO -     connection_info = await self.provisioner.launch_kernel(kernel_cmd, **kw)
+[2025-08-12T11:17:20.986+0000] {subprocess.py:93} INFO -                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:20.986+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/provisioning/local_provisioner.py", line 210, in launch_kernel
+[2025-08-12T11:17:20.987+0000] {subprocess.py:93} INFO -     self.process = launch_kernel(cmd, **scrubbed_kwargs)
+[2025-08-12T11:17:20.988+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:20.989+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/launcher.py", line 170, in launch_kernel
+[2025-08-12T11:17:20.989+0000] {subprocess.py:93} INFO -     raise ex
+[2025-08-12T11:17:20.990+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/launcher.py", line 155, in launch_kernel
+[2025-08-12T11:17:20.990+0000] {subprocess.py:93} INFO -     proc = Popen(cmd, **kwargs)  # noqa
+[2025-08-12T11:17:20.990+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:20.991+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1026, in __init__
+[2025-08-12T11:17:20.991+0000] {subprocess.py:93} INFO -     self._execute_child(args, executable, preexec_fn, close_fds,
+[2025-08-12T11:17:20.992+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1955, in _execute_child
+[2025-08-12T11:17:20.992+0000] {subprocess.py:93} INFO -     raise child_exception_type(errno_num, err_msg, err_filename)
+[2025-08-12T11:17:20.993+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: ''
+[2025-08-12T11:17:20.993+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/21 [00:00<?, ?cell/s]
+[2025-08-12T11:17:20.993+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T11:17:20.994+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+[2025-08-12T11:17:20.995+0000] {subprocess.py:93} INFO -     asyncio.get_running_loop()
+[2025-08-12T11:17:20.995+0000] {subprocess.py:93} INFO - RuntimeError: no running event loop
+[2025-08-12T11:17:20.996+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:17:20.997+0000] {subprocess.py:93} INFO - During handling of the above exception, another exception occurred:
+[2025-08-12T11:17:20.997+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:17:20.998+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T11:17:20.998+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 198, in _run_module_as_main
+[2025-08-12T11:17:20.999+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 88, in _run_code
+[2025-08-12T11:17:20.999+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/__main__.py", line 4, in <module>
+[2025-08-12T11:17:21.000+0000] {subprocess.py:93} INFO -     papermill()
+[2025-08-12T11:17:21.000+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2025-08-12T11:17:21.001+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-08-12T11:17:21.001+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.002+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2025-08-12T11:17:21.002+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-08-12T11:17:21.003+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.003+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2025-08-12T11:17:21.004+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-08-12T11:17:21.004+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.005+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2025-08-12T11:17:21.005+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-08-12T11:17:21.006+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.006+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2025-08-12T11:17:21.007+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-08-12T11:17:21.008+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.008+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2025-08-12T11:17:21.009+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2025-08-12T11:17:21.009+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+[2025-08-12T11:17:21.009+0000] {subprocess.py:93} INFO -     nb = papermill_engines.execute_notebook_with_engine(
+[2025-08-12T11:17:21.010+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.010+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+[2025-08-12T11:17:21.011+0000] {subprocess.py:93} INFO -     return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+[2025-08-12T11:17:21.011+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.011+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 370, in execute_notebook
+[2025-08-12T11:17:21.012+0000] {subprocess.py:93} INFO -     cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+[2025-08-12T11:17:21.012+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 442, in execute_managed_notebook
+[2025-08-12T11:17:21.013+0000] {subprocess.py:93} INFO -     return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+[2025-08-12T11:17:21.013+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.014+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+[2025-08-12T11:17:21.014+0000] {subprocess.py:93} INFO -     with self.setup_kernel(**kwargs):
+[2025-08-12T11:17:21.015+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+[2025-08-12T11:17:21.015+0000] {subprocess.py:93} INFO -     return next(self.gen)
+[2025-08-12T11:17:21.016+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.016+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/nbclient/client.py", line 600, in setup_kernel
+[2025-08-12T11:17:21.017+0000] {subprocess.py:93} INFO -     self.start_new_kernel(**kwargs)
+[2025-08-12T11:17:21.017+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+[2025-08-12T11:17:21.018+0000] {subprocess.py:93} INFO -     return loop.run_until_complete(inner)
+[2025-08-12T11:17:21.018+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.018+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+[2025-08-12T11:17:21.019+0000] {subprocess.py:93} INFO -     return future.result()
+[2025-08-12T11:17:21.019+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.020+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/nbclient/client.py", line 550, in async_start_new_kernel
+[2025-08-12T11:17:21.020+0000] {subprocess.py:93} INFO -     await ensure_async(self.km.start_kernel(extra_arguments=self.extra_arguments, **kwargs))
+[2025-08-12T11:17:21.021+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 197, in ensure_async
+[2025-08-12T11:17:21.021+0000] {subprocess.py:93} INFO -     result = await obj
+[2025-08-12T11:17:21.022+0000] {subprocess.py:93} INFO -              ^^^^^^^^^
+[2025-08-12T11:17:21.022+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 96, in wrapper
+[2025-08-12T11:17:21.023+0000] {subprocess.py:93} INFO -     raise e
+[2025-08-12T11:17:21.023+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 87, in wrapper
+[2025-08-12T11:17:21.023+0000] {subprocess.py:93} INFO -     out = await method(self, *args, **kwargs)
+[2025-08-12T11:17:21.024+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.024+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 439, in _async_start_kernel
+[2025-08-12T11:17:21.025+0000] {subprocess.py:93} INFO -     await self._async_launch_kernel(kernel_cmd, **kw)
+[2025-08-12T11:17:21.025+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 354, in _async_launch_kernel
+[2025-08-12T11:17:21.025+0000] {subprocess.py:93} INFO -     connection_info = await self.provisioner.launch_kernel(kernel_cmd, **kw)
+[2025-08-12T11:17:21.026+0000] {subprocess.py:93} INFO -                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.026+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/provisioning/local_provisioner.py", line 210, in launch_kernel
+[2025-08-12T11:17:21.026+0000] {subprocess.py:93} INFO -     self.process = launch_kernel(cmd, **scrubbed_kwargs)
+[2025-08-12T11:17:21.027+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.028+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/launcher.py", line 170, in launch_kernel
+[2025-08-12T11:17:21.029+0000] {subprocess.py:93} INFO -     raise ex
+[2025-08-12T11:17:21.029+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/launcher.py", line 155, in launch_kernel
+[2025-08-12T11:17:21.029+0000] {subprocess.py:93} INFO -     proc = Popen(cmd, **kwargs)  # noqa
+[2025-08-12T11:17:21.030+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T11:17:21.030+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1026, in __init__
+[2025-08-12T11:17:21.031+0000] {subprocess.py:93} INFO -     self._execute_child(args, executable, preexec_fn, close_fds,
+[2025-08-12T11:17:21.031+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/subprocess.py", line 1955, in _execute_child
+[2025-08-12T11:17:21.032+0000] {subprocess.py:93} INFO -     raise child_exception_type(errno_num, err_msg, err_filename)
+[2025-08-12T11:17:21.032+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: ''
+[2025-08-12T11:17:21.233+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T11:17:21.234+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T11:17:21.251+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T11:17:21.256+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T111716, end_date=20250812T111721
+[2025-08-12T11:17:21.281+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 107 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 956)
+[2025-08-12T11:17:21.332+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T11:17:21.356+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T11:17:21.359+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

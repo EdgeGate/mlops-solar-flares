@@ -1,0 +1,37 @@
+[2025-08-12T11:27:16.886+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T11:27:16.922+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:27:16.929+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:27:16.930+0000] {taskinstance.py:2306} INFO - Starting attempt 6 of 12
+[2025-08-12T11:27:16.942+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-11 12:00:00+00:00
+[2025-08-12T11:27:16.951+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '112', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmp0dkcmc2g']
+[2025-08-12T11:27:16.953+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1242) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T11:27:16.953+0000] {standard_task_runner.py:91} INFO - Job 112: Subtask train_notebook
+[2025-08-12T11:27:16.954+0000] {standard_task_runner.py:63} INFO - Started process 1243 to run task
+[2025-08-12T11:27:17.003+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-11T12:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T11:27:17.079+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T11:27:17.080+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T11:27:17.091+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T11:27:17.093+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nexport PATH="$HOME/.local/bin:$PATH"\n\n# Vérifier les outils nécessaires\nwhich python\nwhich papermill\n\n# Créer le répertoire de sortie\nmkdir -p /opt/project/notebooks/runs\ncd /opt/project/notebooks\n\n# Vérifier que le notebook source existe\nif [ ! -f "ml_x_ray_sensor.ipynb" ]; then\n    echo "ERREUR: Notebook ml_x_ray_sensor.ipynb non trouvé dans $(pwd)"\n    ls -la\n    exit 1\nfi\n\n# Nom du fichier de sortie\nOUT="ml_x_ray_sensor_run_20250811T120000.ipynb"\necho "Exécution du notebook vers: $OUT"\n\n# Exécuter avec papermill en spécifiant le kernel explicitement\npython -m papermill \\\n    --kernel *** \\\n    --log-output \\\n    --stdout-file /tmp/papermill_stdout.log \\\n    --stderr-file /tmp/papermill_stderr.log \\\n    ml_x_ray_sensor.ipynb \\\n    "runs/$OUT"\n\necho "Notebook exécuté avec succès -> runs/$OUT"\n\n# Afficher les logs en cas de problème\nif [ -f /tmp/papermill_stdout.log ]; then\n    echo "=== STDOUT ==="\n    cat /tmp/papermill_stdout.log\nfi\n\nif [ -f /tmp/papermill_stderr.log ]; then\n    echo "=== STDERR ==="\n    cat /tmp/papermill_stderr.log\nfi']
+[2025-08-12T11:27:17.104+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T11:27:17.108+0000] {subprocess.py:93} INFO - /usr/local/bin/python
+[2025-08-12T11:27:17.110+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T11:27:17.111+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T11:27:17.120+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T11:27:17.124+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T112716, end_date=20250812T112717
+[2025-08-12T11:27:17.134+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 112 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 1243)
+[2025-08-12T11:27:17.167+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T11:27:17.190+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T11:27:17.194+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

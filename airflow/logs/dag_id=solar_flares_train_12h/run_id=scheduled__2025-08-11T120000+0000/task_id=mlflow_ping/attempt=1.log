@@ -1,0 +1,40 @@
+[2025-08-12T11:02:23.281+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T11:02:23.363+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:02:23.379+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T11:02:23.381+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-12T11:02:23.404+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): mlflow_ping> on 2025-08-11 12:00:00+00:00
+[2025-08-12T11:02:23.420+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=553) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T11:02:23.418+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'mlflow_ping', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpgfmkx0fn']
+[2025-08-12T11:02:23.422+0000] {standard_task_runner.py:63} INFO - Started process 554 to run task
+[2025-08-12T11:02:23.422+0000] {standard_task_runner.py:91} INFO - Job 102: Subtask mlflow_ping
+[2025-08-12T11:02:23.504+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.mlflow_ping scheduled__2025-08-11T12:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T11:02:23.647+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='mlflow_ping' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T11:02:23.648+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T11:02:23.710+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T11:02:23.713+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "\npython - <<'PY'\nimport os, mlflow, time\nprint('URI:', os.getenv('MLFLOW_TRACKING_URI'))\nmlflow.set_tracking_uri(os.getenv('MLFLOW_TRACKING_URI'))\nwith mlflow.start_run(run_name='***-ping-' + time.strftime('%Y%m%d-%H%M%S')):\n    mlflow.log_param('ping','ok')\nprint('OK')\nPY"]
+[2025-08-12T11:02:23.739+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T11:02:25.956+0000] {subprocess.py:93} INFO - 2025/08/12 11:02:25 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-08-12T11:02:25.957+0000] {subprocess.py:93} INFO - The git executable must be specified in one of the following ways:
+[2025-08-12T11:02:25.957+0000] {subprocess.py:93} INFO -     - be included in your $PATH
+[2025-08-12T11:02:25.957+0000] {subprocess.py:93} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-08-12T11:02:25.958+0000] {subprocess.py:93} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-08-12T11:02:25.958+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:02:25.958+0000] {subprocess.py:93} INFO - All git commands will error until this is rectified.
+[2025-08-12T11:02:25.959+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:02:25.959+0000] {subprocess.py:93} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-08-12T11:02:25.959+0000] {subprocess.py:93} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-08-12T11:02:25.960+0000] {subprocess.py:93} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-08-12T11:02:25.960+0000] {subprocess.py:93} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-08-12T11:02:25.961+0000] {subprocess.py:93} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-08-12T11:02:25.961+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:02:25.961+0000] {subprocess.py:93} INFO - Example:
+[2025-08-12T11:02:25.962+0000] {subprocess.py:93} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-08-12T11:02:25.962+0000] {subprocess.py:93} INFO - 
+[2025-08-12T11:02:26.104+0000] {subprocess.py:93} INFO - URI: http://mlflow:5000
+[2025-08-12T11:02:26.105+0000] {subprocess.py:93} INFO - OK
+[2025-08-12T11:02:26.349+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-12T11:02:26.350+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T11:02:26.390+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=solar_flares_train_12h, task_id=mlflow_ping, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T110223, end_date=20250812T110226
+[2025-08-12T11:02:26.421+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-12T11:02:26.445+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T11:02:26.449+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,82 @@
+[2025-08-12T14:19:28.690+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T14:19:28.730+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T14:19:28.737+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T14:19:28.738+0000] {taskinstance.py:2306} INFO - Starting attempt 19 of 21
+[2025-08-12T14:19:28.751+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-12 00:00:00+00:00
+[2025-08-12T14:19:28.760+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-12T00:00:00+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpd35xmwqo']
+[2025-08-12T14:19:28.762+0000] {standard_task_runner.py:91} INFO - Job 145: Subtask train_notebook
+[2025-08-12T14:19:28.762+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6798) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T14:19:28.763+0000] {standard_task_runner.py:63} INFO - Started process 6799 to run task
+[2025-08-12T14:19:28.815+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T14:19:28.915+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='19' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-12T00:00:00+00:00'
+[2025-08-12T14:19:28.916+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T14:19:28.929+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T14:19:28.931+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -euo pipefail\ntrap \'echo "[trap] SIGTERM -> arrêt propre"; exit 143\' TERM INT\ncd /opt/project/notebooks\n\n# Exécuter papermill vers un fichier temporaire et le supprimer\nOUT="$(mktemp -p /tmp ml_x_ray_sensor_run_XXXXXX.ipynb)"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$OUT"\necho "Notebook exécuté -> $OUT"\nrm -f "$OUT"']
+[2025-08-12T14:19:28.944+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T14:19:30.429+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-12T14:19:30.430+0000] {subprocess.py:93} INFO - Output Notebook: /tmp/ml_x_ray_sensor_run_bWT8ne.ipynb
+[2025-08-12T14:19:32.259+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/20 [00:00<?, ?cell/s]Executing notebook with kernel: ***
+[2025-08-12T14:20:34.984+0000] {subprocess.py:93} INFO - Executing:   5%|▌         | 1/20 [00:06<01:56,  6.12s/cell]Executing:  10%|█         | 2/20 [00:06<00:46,  2.59s/cell]Executing:  20%|██        | 4/20 [00:06<00:16,  1.02s/cell]Executing:  25%|██▌       | 5/20 [00:07<00:16,  1.08s/cell]Executing:  35%|███▌      | 7/20 [00:08<00:08,  1.51cell/s]Executing:  40%|████      | 8/20 [00:08<00:06,  1.75cell/s]Executing:  50%|█████     | 10/20 [00:08<00:03,  2.81cell/s]Executing:  55%|█████▌    | 11/20 [00:08<00:03,  2.79cell/s]Executing:  65%|██████▌   | 13/20 [00:08<00:01,  4.21cell/s]Executing:  65%|██████▌   | 13/20 [00:21<00:01,  4.21cell/s]Executing:  70%|███████   | 14/20 [01:02<01:12, 12.10s/cell]Executing:  75%|███████▌  | 15/20 [01:03<00:46,  9.23s/cell]Executing:  85%|████████▌ | 17/20 [01:03<00:16,  5.50s/cell]Executing:  90%|█████████ | 18/20 [01:04<00:07,  3.58s/cell]
+[2025-08-12T14:20:34.997+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T14:20:34.998+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 198, in _run_module_as_main
+[2025-08-12T14:20:34.998+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 88, in _run_code
+[2025-08-12T14:20:34.998+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/__main__.py", line 4, in <module>
+[2025-08-12T14:20:34.999+0000] {subprocess.py:93} INFO -     papermill()
+[2025-08-12T14:20:34.999+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2025-08-12T14:20:34.999+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-08-12T14:20:35.000+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T14:20:35.000+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2025-08-12T14:20:35.000+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-08-12T14:20:35.001+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2025-08-12T14:20:35.001+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2025-08-12T14:20:35.001+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-08-12T14:20:35.002+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T14:20:35.002+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2025-08-12T14:20:35.002+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-08-12T14:20:35.003+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T14:20:35.003+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2025-08-12T14:20:35.003+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-08-12T14:20:35.004+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T14:20:35.004+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2025-08-12T14:20:35.004+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2025-08-12T14:20:35.005+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2025-08-12T14:20:35.005+0000] {subprocess.py:93} INFO -     raise_for_execution_errors(nb, output_path)
+[2025-08-12T14:20:35.005+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2025-08-12T14:20:35.005+0000] {subprocess.py:93} INFO -     raise error
+[2025-08-12T14:20:35.006+0000] {subprocess.py:93} INFO - papermill.exceptions.PapermillExecutionError:
+[2025-08-12T14:20:35.006+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T14:20:35.007+0000] {subprocess.py:93} INFO - Exception encountered at "In [16]":
+[2025-08-12T14:20:35.007+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T14:20:35.007+0000] {subprocess.py:93} INFO - ModuleNotFoundError                       Traceback (most recent call last)
+[2025-08-12T14:20:35.008+0000] {subprocess.py:93} INFO - Cell In[16], line 20
+[2025-08-12T14:20:35.008+0000] {subprocess.py:93} INFO -      18 # Evidently 0.7+
+[2025-08-12T14:20:35.008+0000] {subprocess.py:93} INFO -      19 from evidently import Report
+[2025-08-12T14:20:35.008+0000] {subprocess.py:93} INFO - ---> 20 from evidently.metric_preset import ClassificationPreset
+[2025-08-12T14:20:35.009+0000] {subprocess.py:93} INFO -      21 from evidently.metrics.data_drift.data_definition import (
+[2025-08-12T14:20:35.009+0000] {subprocess.py:93} INFO -      22     DataDefinition, MulticlassClassification
+[2025-08-12T14:20:35.009+0000] {subprocess.py:93} INFO -      23 )
+[2025-08-12T14:20:35.010+0000] {subprocess.py:93} INFO -      25 # MLflow tracking (ne pas toucher au docker)
+[2025-08-12T14:20:35.010+0000] {subprocess.py:93} INFO - 
+[2025-08-12T14:20:35.010+0000] {subprocess.py:93} INFO - ModuleNotFoundError: No module named 'evidently.metric_preset'
+[2025-08-12T14:20:35.011+0000] {subprocess.py:93} INFO - 
+[2025-08-12T14:20:35.165+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T14:20:35.166+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T14:20:35.177+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T14:20:35.181+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-12T00:00:00+00:00, execution_date=20250812T000000, start_date=20250812T141928, end_date=20250812T142035
+[2025-08-12T14:20:35.200+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 145 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 6799)
+[2025-08-12T14:20:35.235+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T14:20:35.252+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T14:20:35.255+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,39 @@
+[2025-08-14T00:44:37.288+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T00:44:37.324+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.dq_quick scheduled__2025-08-13T12:00:00+00:00 [queued]>
+[2025-08-14T00:44:37.334+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.dq_quick scheduled__2025-08-13T12:00:00+00:00 [queued]>
+[2025-08-14T00:44:37.335+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-14T00:44:37.348+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): dq_quick> on 2025-08-13 12:00:00+00:00
+[2025-08-14T00:44:37.357+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'dq_quick', 'scheduled__2025-08-13T12:00:00+00:00', '--job-id', '176', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmpw9_lb6kp']
+[2025-08-14T00:44:37.360+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6669) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T00:44:37.360+0000] {standard_task_runner.py:91} INFO - Job 176: Subtask dq_quick
+[2025-08-14T00:44:37.360+0000] {standard_task_runner.py:63} INFO - Started process 6671 to run task
+[2025-08-14T00:44:37.424+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.dq_quick scheduled__2025-08-13T12:00:00+00:00 [running]> on host def4e694b617
+[2025-08-14T00:44:37.523+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='dq_quick' AIRFLOW_CTX_EXECUTION_DATE='2025-08-13T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-13T12:00:00+00:00'
+[2025-08-14T00:44:37.524+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T00:44:37.538+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-14T00:44:37.540+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "python - <<'PY'\nimport os, sys, pandas as pd\nroot=os.environ.get('PROJECT_ROOT','/opt/project')\np=os.path.join(root,'data','xrs_clean.parquet')\nprint('reading:', p)\nif not os.path.exists(p):\n    print('file not found yet — skipping DQ'); sys.exit(0)\ndf=pd.read_parquet(p)\nprint('shape:', df.shape)\nprint('nulls:\\n', df.isna().sum().sort_values(ascending=False).to_string())\nprint('by satellite:\\n', df.groupby('satellite')['time'].agg(['min','max','count']))\nPY"]
+[2025-08-14T00:44:37.552+0000] {subprocess.py:86} INFO - Output:
+[2025-08-14T00:44:38.351+0000] {subprocess.py:93} INFO - reading: /opt/project/data/xrs_clean.parquet
+[2025-08-14T00:44:38.351+0000] {subprocess.py:93} INFO - shape: (151242, 11)
+[2025-08-14T00:44:38.352+0000] {subprocess.py:93} INFO - nulls:
+[2025-08-14T00:44:38.352+0000] {subprocess.py:93} INFO -  satellite         135360
+[2025-08-14T00:44:38.352+0000] {subprocess.py:93} INFO - source             15882
+[2025-08-14T00:44:38.353+0000] {subprocess.py:93} INFO - flux_long_wm2       1644
+[2025-08-14T00:44:38.353+0000] {subprocess.py:93} INFO - flux_short_wm2      1644
+[2025-08-14T00:44:38.353+0000] {subprocess.py:93} INFO - time                   0
+[2025-08-14T00:44:38.353+0000] {subprocess.py:93} INFO - energy_long            0
+[2025-08-14T00:44:38.354+0000] {subprocess.py:93} INFO - energy_short           0
+[2025-08-14T00:44:38.354+0000] {subprocess.py:93} INFO - date                   0
+[2025-08-14T00:44:38.354+0000] {subprocess.py:93} INFO - hour                   0
+[2025-08-14T00:44:38.355+0000] {subprocess.py:93} INFO - minute_of_day          0
+[2025-08-14T00:44:38.355+0000] {subprocess.py:93} INFO - dow                    0
+[2025-08-14T00:44:38.355+0000] {subprocess.py:93} INFO - by satellite:
+[2025-08-14T00:44:38.356+0000] {subprocess.py:93} INFO -                                  min                       max  count
+[2025-08-14T00:44:38.356+0000] {subprocess.py:93} INFO - satellite
+[2025-08-14T00:44:38.356+0000] {subprocess.py:93} INFO - GOES-18   2025-08-03 00:00:00+00:00 2025-08-14 00:41:00+00:00  15882
+[2025-08-14T00:44:38.444+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-14T00:44:38.445+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T00:44:38.489+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=xrs_update_12h, task_id=dq_quick, run_id=scheduled__2025-08-13T12:00:00+00:00, execution_date=20250813T120000, start_date=20250814T004437, end_date=20250814T004438
+[2025-08-14T00:44:38.540+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T00:44:38.562+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T00:44:38.565+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

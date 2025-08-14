@@ -1,0 +1,28 @@
+[2025-08-12T00:00:08.366+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T00:00:08.402+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T00:00:08.410+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-11T12:00:00+00:00 [queued]>
+[2025-08-12T00:00:08.411+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-12T00:00:08.423+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): update_swpc_recent> on 2025-08-11 12:00:00+00:00
+[2025-08-12T00:00:08.431+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'update_swpc_recent', 'scheduled__2025-08-11T12:00:00+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmp1nfr1gd0']
+[2025-08-12T00:00:08.433+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2448) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T00:00:08.434+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask update_swpc_recent
+[2025-08-12T00:00:08.434+0000] {standard_task_runner.py:63} INFO - Started process 2449 to run task
+[2025-08-12T00:00:08.487+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-11T12:00:00+00:00 [running]> on host cc677a4d03cd
+[2025-08-12T00:00:08.574+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='update_swpc_recent' AIRFLOW_CTX_EXECUTION_DATE='2025-08-11T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-11T12:00:00+00:00'
+[2025-08-12T00:00:08.575+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T00:00:08.587+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T00:00:08.589+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/project/src/data/xrs_update.py --mode update --since-minutes 20160 --keep-days 180']
+[2025-08-12T00:00:08.601+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T00:00:10.144+0000] {subprocess.py:93} INFO - WARNING: SunpyUserWarning: Importing sunpy.timeseries without its extra dependencies may result in errors.
+[2025-08-12T00:00:10.145+0000] {subprocess.py:93} INFO - The following packages are not installed:
+[2025-08-12T00:00:10.145+0000] {subprocess.py:93} INFO - ['cdflib>=1.3.2', 'h5netcdf>=1.2.0', 'h5py>=3.9.0', 'matplotlib>=3.8.0']
+[2025-08-12T00:00:10.145+0000] {subprocess.py:93} INFO - To install sunpy with these dependencies use `pip install sunpy[timeseries]` or `pip install sunpy[all]` for all extras.
+[2025-08-12T00:00:10.145+0000] {subprocess.py:93} INFO - If you installed sunpy via conda, please report this to the community channel: https://matrix.to/#/#sunpy:openastronomy.org [sunpy.util.sysinfo]
+[2025-08-12T00:00:11.591+0000] {subprocess.py:93} INFO - [INFO] retention applied: >= 2025-02-13 00:00:11.436352+00:00
+[2025-08-12T00:00:11.592+0000] {subprocess.py:93} INFO - {"merged_rows_total": 148317, "range": ["2025-05-01 00:00:00+00:00", "2025-08-11 23:56:00+00:00"]}
+[2025-08-12T00:00:11.777+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-12T00:00:11.778+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T00:00:11.804+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=xrs_update_12h, task_id=update_swpc_recent, run_id=scheduled__2025-08-11T12:00:00+00:00, execution_date=20250811T120000, start_date=20250812T000008, end_date=20250812T000011
+[2025-08-12T00:00:11.861+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-12T00:00:11.883+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T00:00:11.886+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

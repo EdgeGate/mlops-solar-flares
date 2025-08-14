@@ -1,0 +1,23 @@
+[2025-08-10T00:49:54.823+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-10T00:49:54.857+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-09T12:00:00+00:00 [queued]>
+[2025-08-10T00:49:54.865+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-09T12:00:00+00:00 [queued]>
+[2025-08-10T00:49:54.865+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-10T00:49:54.877+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): update_swpc_recent> on 2025-08-09 12:00:00+00:00
+[2025-08-10T00:49:54.887+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1308) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-10T00:49:54.885+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'update_swpc_recent', 'scheduled__2025-08-09T12:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmpw2rl77e1']
+[2025-08-10T00:49:54.888+0000] {standard_task_runner.py:63} INFO - Started process 1309 to run task
+[2025-08-10T00:49:54.888+0000] {standard_task_runner.py:91} INFO - Job 84: Subtask update_swpc_recent
+[2025-08-10T00:49:54.938+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.update_swpc_recent scheduled__2025-08-09T12:00:00+00:00 [running]> on host cc677a4d03cd
+[2025-08-10T00:49:55.036+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='update_swpc_recent' AIRFLOW_CTX_EXECUTION_DATE='2025-08-09T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-09T12:00:00+00:00'
+[2025-08-10T00:49:55.037+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-10T00:49:55.050+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-10T00:49:55.051+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/project/src/data/xrs_update.py --mode update --since-minutes 20160 --keep-days 180']
+[2025-08-10T00:49:55.065+0000] {subprocess.py:86} INFO - Output:
+[2025-08-10T00:49:58.473+0000] {subprocess.py:93} INFO - [INFO] retention applied: >= 2025-02-11 00:49:58.434015+00:00
+[2025-08-10T00:49:58.474+0000] {subprocess.py:93} INFO - {"merged_rows_total": 10382, "range": ["2025-08-02 19:46:00+00:00", "2025-08-10 00:47:00+00:00"]}
+[2025-08-10T00:49:58.634+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-10T00:49:58.636+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-10T00:49:58.674+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=xrs_update_12h, task_id=update_swpc_recent, run_id=scheduled__2025-08-09T12:00:00+00:00, execution_date=20250809T120000, start_date=20250810T004954, end_date=20250810T004958
+[2025-08-10T00:49:58.721+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-10T00:49:58.752+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-10T00:49:58.763+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,150 @@
+[2025-08-12T13:42:42.203+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T13:42:42.235+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T13:42:42.242+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T13:42:42.243+0000] {taskinstance.py:2306} INFO - Starting attempt 10 of 12
+[2025-08-12T13:42:42.254+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-12 00:00:00+00:00
+[2025-08-12T13:42:42.262+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-12T00:00:00+00:00', '--job-id', '136', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpuinvk67r']
+[2025-08-12T13:42:42.264+0000] {standard_task_runner.py:91} INFO - Job 136: Subtask train_notebook
+[2025-08-12T13:42:42.265+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5248) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T13:42:42.265+0000] {standard_task_runner.py:63} INFO - Started process 5249 to run task
+[2025-08-12T13:42:42.312+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T13:42:42.387+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='10' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-12T00:00:00+00:00'
+[2025-08-12T13:42:42.390+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T13:42:42.402+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T13:42:42.404+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nmkdir -p /opt/project/notebooks/runs\ncd /opt/project/notebooks\nOUT="ml_x_ray_sensor_run_20250812T000000.ipynb"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$OUT"\necho "Notebook exécuté -> $OUT"']
+[2025-08-12T13:42:42.414+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T13:42:43.658+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-12T13:42:43.658+0000] {subprocess.py:93} INFO - Output Notebook: ml_x_ray_sensor_run_20250812T000000.ipynb
+[2025-08-12T13:42:45.376+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/20 [00:00<?, ?cell/s]Executing notebook with kernel: ***
+[2025-08-12T13:43:45.551+0000] {subprocess.py:93} INFO - Executing:   5%|▌         | 1/20 [00:05<01:37,  5.11s/cell]Executing:  10%|█         | 2/20 [00:05<00:39,  2.18s/cell]Executing:  20%|██        | 4/20 [00:05<00:13,  1.18cell/s]Executing:  30%|███       | 6/20 [00:06<00:09,  1.50cell/s]Executing:  35%|███▌      | 7/20 [00:06<00:07,  1.78cell/s]Executing:  40%|████      | 8/20 [00:06<00:05,  2.08cell/s]Executing:  55%|█████▌    | 11/20 [00:07<00:02,  3.45cell/s]Executing:  70%|███████   | 14/20 [00:57<00:44,  7.43s/cell]Executing:  75%|███████▌  | 15/20 [00:57<00:30,  6.18s/cell]Executing:  85%|████████▌ | 17/20 [00:57<00:12,  4.18s/cell]Executing:  90%|█████████ | 18/20 [01:01<00:06,  3.44s/cell]
+[2025-08-12T13:43:45.566+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T13:43:45.566+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 198, in _run_module_as_main
+[2025-08-12T13:43:45.566+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 88, in _run_code
+[2025-08-12T13:43:45.567+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/__main__.py", line 4, in <module>
+[2025-08-12T13:43:45.567+0000] {subprocess.py:93} INFO -     papermill()
+[2025-08-12T13:43:45.568+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2025-08-12T13:43:45.568+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-08-12T13:43:45.568+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:43:45.568+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2025-08-12T13:43:45.569+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-08-12T13:43:45.569+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2025-08-12T13:43:45.569+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2025-08-12T13:43:45.569+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-08-12T13:43:45.570+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:43:45.570+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2025-08-12T13:43:45.570+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-08-12T13:43:45.570+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:43:45.571+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2025-08-12T13:43:45.571+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-08-12T13:43:45.571+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:43:45.571+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2025-08-12T13:43:45.572+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2025-08-12T13:43:45.572+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2025-08-12T13:43:45.572+0000] {subprocess.py:93} INFO -     raise_for_execution_errors(nb, output_path)
+[2025-08-12T13:43:45.572+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2025-08-12T13:43:45.573+0000] {subprocess.py:93} INFO -     raise error
+[2025-08-12T13:43:45.573+0000] {subprocess.py:93} INFO - papermill.exceptions.PapermillExecutionError:
+[2025-08-12T13:43:45.573+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T13:43:45.573+0000] {subprocess.py:93} INFO - Exception encountered at "In [16]":
+[2025-08-12T13:43:45.573+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T13:43:45.574+0000] {subprocess.py:93} INFO - RestException                             Traceback (most recent call last)
+[2025-08-12T13:43:45.574+0000] {subprocess.py:93} INFO - Cell In[16], line 169
+[2025-08-12T13:43:45.574+0000] {subprocess.py:93} INFO -     166     mlflow.end_run()
+[2025-08-12T13:43:45.575+0000] {subprocess.py:93} INFO -     168 run_name = f"GBM_X_focus_threshold_{time.strftime('%Y%m%d-%H%M%S')}"
+[2025-08-12T13:43:45.575+0000] {subprocess.py:93} INFO - --> 169 with mlflow.start_run(run_name=run_name) as run:
+[2025-08-12T13:43:45.575+0000] {subprocess.py:93} INFO -     170     run_id = run.info.run_id
+[2025-08-12T13:43:45.575+0000] {subprocess.py:93} INFO -     171     print("▶️ MLflow run:", run_id)
+[2025-08-12T13:43:45.576+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.576+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py:382, in start_run(run_id, experiment_id, run_name, nested, tags, description, log_system_metrics)
+[2025-08-12T13:43:45.576+0000] {subprocess.py:93} INFO -     378         user_specified_tags[MLFLOW_RUN_NAME] = run_name
+[2025-08-12T13:43:45.577+0000] {subprocess.py:93} INFO -     380     resolved_tags = context_registry.resolve_tags(user_specified_tags)
+[2025-08-12T13:43:45.577+0000] {subprocess.py:93} INFO - --> 382     active_run_obj = client.create_run(
+[2025-08-12T13:43:45.577+0000] {subprocess.py:93} INFO -     383         experiment_id=exp_id_for_run,
+[2025-08-12T13:43:45.577+0000] {subprocess.py:93} INFO -     384         tags=resolved_tags,
+[2025-08-12T13:43:45.577+0000] {subprocess.py:93} INFO -     385         run_name=run_name,
+[2025-08-12T13:43:45.578+0000] {subprocess.py:93} INFO -     386     )
+[2025-08-12T13:43:45.578+0000] {subprocess.py:93} INFO -     388 if log_system_metrics is None:
+[2025-08-12T13:43:45.578+0000] {subprocess.py:93} INFO -     389     # If `log_system_metrics` is not specified, we will check environment variable.
+[2025-08-12T13:43:45.579+0000] {subprocess.py:93} INFO -     390     log_system_metrics = MLFLOW_ENABLE_SYSTEM_METRICS_LOGGING.get()
+[2025-08-12T13:43:45.579+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.579+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/client.py:393, in MlflowClient.create_run(self, experiment_id, start_time, tags, run_name)
+[2025-08-12T13:43:45.580+0000] {subprocess.py:93} INFO -     339 def create_run(
+[2025-08-12T13:43:45.580+0000] {subprocess.py:93} INFO -     340     self,
+[2025-08-12T13:43:45.580+0000] {subprocess.py:93} INFO -     341     experiment_id: str,
+[2025-08-12T13:43:45.581+0000] {subprocess.py:93} INFO -    (...)    344     run_name: Optional[str] = None,
+[2025-08-12T13:43:45.581+0000] {subprocess.py:93} INFO -     345 ) -> Run:
+[2025-08-12T13:43:45.581+0000] {subprocess.py:93} INFO -     346     """
+[2025-08-12T13:43:45.581+0000] {subprocess.py:93} INFO -     347     Create a :py:class:`mlflow.entities.Run` object that can be associated with
+[2025-08-12T13:43:45.582+0000] {subprocess.py:93} INFO -     348     metrics, parameters, artifacts, etc.
+[2025-08-12T13:43:45.582+0000] {subprocess.py:93} INFO -    (...)    391         status: RUNNING
+[2025-08-12T13:43:45.582+0000] {subprocess.py:93} INFO -     392     """
+[2025-08-12T13:43:45.582+0000] {subprocess.py:93} INFO - --> 393     return self._tracking_client.create_run(experiment_id, start_time, tags, run_name)
+[2025-08-12T13:43:45.583+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.583+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py:165, in TrackingServiceClient.create_run(self, experiment_id, start_time, tags, run_name)
+[2025-08-12T13:43:45.584+0000] {subprocess.py:93} INFO -     160 # Extract user from tags
+[2025-08-12T13:43:45.584+0000] {subprocess.py:93} INFO -     161 # This logic is temporary; the user_id attribute of runs is deprecated and will be removed
+[2025-08-12T13:43:45.584+0000] {subprocess.py:93} INFO -     162 # in a later release.
+[2025-08-12T13:43:45.584+0000] {subprocess.py:93} INFO -     163 user_id = tags.get(MLFLOW_USER, "unknown")
+[2025-08-12T13:43:45.585+0000] {subprocess.py:93} INFO - --> 165 return self.store.create_run(
+[2025-08-12T13:43:45.585+0000] {subprocess.py:93} INFO -     166     experiment_id=experiment_id,
+[2025-08-12T13:43:45.585+0000] {subprocess.py:93} INFO -     167     user_id=user_id,
+[2025-08-12T13:43:45.586+0000] {subprocess.py:93} INFO -     168     start_time=start_time or get_current_time_millis(),
+[2025-08-12T13:43:45.586+0000] {subprocess.py:93} INFO -     169     tags=[RunTag(key, value) for (key, value) in tags.items()],
+[2025-08-12T13:43:45.586+0000] {subprocess.py:93} INFO -     170     run_name=run_name,
+[2025-08-12T13:43:45.586+0000] {subprocess.py:93} INFO -     171 )
+[2025-08-12T13:43:45.587+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.588+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py:208, in RestStore.create_run(self, experiment_id, user_id, start_time, tags, run_name)
+[2025-08-12T13:43:45.588+0000] {subprocess.py:93} INFO -     198 tag_protos = [tag.to_proto() for tag in tags]
+[2025-08-12T13:43:45.588+0000] {subprocess.py:93} INFO -     199 req_body = message_to_json(
+[2025-08-12T13:43:45.588+0000] {subprocess.py:93} INFO -     200     CreateRun(
+[2025-08-12T13:43:45.589+0000] {subprocess.py:93} INFO -     201         experiment_id=str(experiment_id),
+[2025-08-12T13:43:45.589+0000] {subprocess.py:93} INFO -    (...)    206     )
+[2025-08-12T13:43:45.589+0000] {subprocess.py:93} INFO -     207 )
+[2025-08-12T13:43:45.590+0000] {subprocess.py:93} INFO - --> 208 response_proto = self._call_endpoint(CreateRun, req_body)
+[2025-08-12T13:43:45.590+0000] {subprocess.py:93} INFO -     209 return Run.from_proto(response_proto.run)
+[2025-08-12T13:43:45.590+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.590+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/store/tracking/rest_store.py:81, in RestStore._call_endpoint(self, api, json_body, endpoint)
+[2025-08-12T13:43:45.591+0000] {subprocess.py:93} INFO -      79     endpoint, method = _METHOD_TO_INFO[api]
+[2025-08-12T13:43:45.591+0000] {subprocess.py:93} INFO -      80 response_proto = api.Response()
+[2025-08-12T13:43:45.591+0000] {subprocess.py:93} INFO - ---> 81 return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+[2025-08-12T13:43:45.591+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.592+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py:304, in call_endpoint(host_creds, endpoint, method, json_body, response_proto, extra_headers)
+[2025-08-12T13:43:45.592+0000] {subprocess.py:93} INFO -     301     call_kwargs["json"] = json_body
+[2025-08-12T13:43:45.592+0000] {subprocess.py:93} INFO -     302     response = http_request(**call_kwargs)
+[2025-08-12T13:43:45.593+0000] {subprocess.py:93} INFO - --> 304 response = verify_rest_response(response, endpoint)
+[2025-08-12T13:43:45.593+0000] {subprocess.py:93} INFO -     305 js_dict = json.loads(response.text)
+[2025-08-12T13:43:45.593+0000] {subprocess.py:93} INFO -     306 parse_dict(js_dict=js_dict, message=response_proto)
+[2025-08-12T13:43:45.593+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.593+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/utils/rest_utils.py:174, in verify_rest_response(response, endpoint)
+[2025-08-12T13:43:45.594+0000] {subprocess.py:93} INFO -     172 if response.status_code != 200:
+[2025-08-12T13:43:45.594+0000] {subprocess.py:93} INFO -     173     if _can_parse_as_json_object(response.text):
+[2025-08-12T13:43:45.594+0000] {subprocess.py:93} INFO - --> 174         raise RestException(json.loads(response.text))
+[2025-08-12T13:43:45.595+0000] {subprocess.py:93} INFO -     175     else:
+[2025-08-12T13:43:45.595+0000] {subprocess.py:93} INFO -     176         base_msg = (
+[2025-08-12T13:43:45.595+0000] {subprocess.py:93} INFO -     177             f"API request to endpoint {endpoint} "
+[2025-08-12T13:43:45.595+0000] {subprocess.py:93} INFO -     178             f"failed with error code {response.status_code} != 200"
+[2025-08-12T13:43:45.596+0000] {subprocess.py:93} INFO -     179         )
+[2025-08-12T13:43:45.596+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.596+0000] {subprocess.py:93} INFO - RestException: RESOURCE_DOES_NOT_EXIST: Could not find experiment with ID 0
+[2025-08-12T13:43:45.596+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:43:45.769+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T13:43:45.770+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T13:43:45.781+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T13:43:45.785+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-12T00:00:00+00:00, execution_date=20250812T000000, start_date=20250812T134242, end_date=20250812T134345
+[2025-08-12T13:43:45.797+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 136 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 5249)
+[2025-08-12T13:43:45.816+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T13:43:45.830+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T13:43:45.833+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

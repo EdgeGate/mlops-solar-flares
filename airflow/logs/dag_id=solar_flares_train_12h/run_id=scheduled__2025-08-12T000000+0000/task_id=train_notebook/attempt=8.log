@@ -1,0 +1,182 @@
+[2025-08-12T13:28:39.047+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-12T13:28:39.078+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T13:28:39.085+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [queued]>
+[2025-08-12T13:28:39.085+0000] {taskinstance.py:2306} INFO - Starting attempt 8 of 10
+[2025-08-12T13:28:39.096+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_notebook> on 2025-08-12 00:00:00+00:00
+[2025-08-12T13:28:39.104+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'train_notebook', 'scheduled__2025-08-12T00:00:00+00:00', '--job-id', '134', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmpzs0y4n99']
+[2025-08-12T13:28:39.106+0000] {standard_task_runner.py:91} INFO - Job 134: Subtask train_notebook
+[2025-08-12T13:28:39.106+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4782) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-12T13:28:39.107+0000] {standard_task_runner.py:63} INFO - Started process 4783 to run task
+[2025-08-12T13:28:39.150+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.train_notebook scheduled__2025-08-12T00:00:00+00:00 [running]> on host 72ec96fe1e37
+[2025-08-12T13:28:39.222+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='train_notebook' AIRFLOW_CTX_EXECUTION_DATE='2025-08-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='8' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-12T00:00:00+00:00'
+[2025-08-12T13:28:39.223+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-12T13:28:39.234+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-12T13:28:39.235+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\nset -e\nmkdir -p /opt/project/notebooks/runs\ncd /opt/project/notebooks\nOUT="ml_x_ray_sensor_run_20250812T000000.ipynb"\npython -m papermill -k *** ml_x_ray_sensor.ipynb "$OUT"\necho "Notebook exécuté -> $OUT"']
+[2025-08-12T13:28:39.246+0000] {subprocess.py:86} INFO - Output:
+[2025-08-12T13:28:40.446+0000] {subprocess.py:93} INFO - Input Notebook:  ml_x_ray_sensor.ipynb
+[2025-08-12T13:28:40.447+0000] {subprocess.py:93} INFO - Output Notebook: ml_x_ray_sensor_run_20250812T000000.ipynb
+[2025-08-12T13:28:42.013+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/20 [00:00<?, ?cell/s]Executing notebook with kernel: ***
+[2025-08-12T13:29:41.681+0000] {subprocess.py:93} INFO - Executing:   5%|▌         | 1/20 [00:06<01:54,  6.04s/cell]Executing:  10%|█         | 2/20 [00:06<00:46,  2.59s/cell]Executing:  20%|██        | 4/20 [00:06<00:16,  1.02s/cell]Executing:  25%|██▌       | 5/20 [00:09<00:23,  1.55s/cell]Executing:  35%|███▌      | 7/20 [00:09<00:11,  1.11cell/s]Executing:  40%|████      | 8/20 [00:09<00:08,  1.34cell/s]Executing:  55%|█████▌    | 11/20 [00:10<00:03,  2.34cell/s]Executing:  70%|███████   | 14/20 [00:56<00:41,  6.86s/cell]Executing:  75%|███████▌  | 15/20 [00:56<00:28,  5.72s/cell]Executing:  85%|████████▌ | 17/20 [00:56<00:11,  3.88s/cell]Executing:  90%|█████████ | 18/20 [01:01<00:06,  3.40s/cell]
+[2025-08-12T13:29:41.696+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-12T13:29:41.696+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 198, in _run_module_as_main
+[2025-08-12T13:29:41.696+0000] {subprocess.py:93} INFO -   File "<frozen runpy>", line 88, in _run_code
+[2025-08-12T13:29:41.697+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/__main__.py", line 4, in <module>
+[2025-08-12T13:29:41.697+0000] {subprocess.py:93} INFO -     papermill()
+[2025-08-12T13:29:41.698+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2025-08-12T13:29:41.698+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2025-08-12T13:29:41.698+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:29:41.699+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2025-08-12T13:29:41.699+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2025-08-12T13:29:41.699+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2025-08-12T13:29:41.699+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2025-08-12T13:29:41.700+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2025-08-12T13:29:41.700+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:29:41.700+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2025-08-12T13:29:41.701+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2025-08-12T13:29:41.701+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:29:41.701+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2025-08-12T13:29:41.702+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2025-08-12T13:29:41.702+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-12T13:29:41.702+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2025-08-12T13:29:41.703+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2025-08-12T13:29:41.703+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 131, in execute_notebook
+[2025-08-12T13:29:41.703+0000] {subprocess.py:93} INFO -     raise_for_execution_errors(nb, output_path)
+[2025-08-12T13:29:41.704+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+[2025-08-12T13:29:41.704+0000] {subprocess.py:93} INFO -     raise error
+[2025-08-12T13:29:41.704+0000] {subprocess.py:93} INFO - papermill.exceptions.PapermillExecutionError:
+[2025-08-12T13:29:41.705+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T13:29:41.705+0000] {subprocess.py:93} INFO - Exception encountered at "In [16]":
+[2025-08-12T13:29:41.705+0000] {subprocess.py:93} INFO - ---------------------------------------------------------------------------
+[2025-08-12T13:29:41.706+0000] {subprocess.py:93} INFO - PermissionError                           Traceback (most recent call last)
+[2025-08-12T13:29:41.706+0000] {subprocess.py:93} INFO - Cell In[16], line 176
+[2025-08-12T13:29:41.706+0000] {subprocess.py:93} INFO -     174 mlflow.log_params(params)
+[2025-08-12T13:29:41.706+0000] {subprocess.py:93} INFO -     175 mlflow.log_metrics(metrics)
+[2025-08-12T13:29:41.707+0000] {subprocess.py:93} INFO - --> 176 mlflow.log_dict(context, "context.json")
+[2025-08-12T13:29:41.707+0000] {subprocess.py:93} INFO -     178 # artefacts
+[2025-08-12T13:29:41.707+0000] {subprocess.py:93} INFO -     179 mlflow.log_text(report_txt, "classification_report_test.txt")
+[2025-08-12T13:29:41.707+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.708+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/fluent.py:1173, in log_dict(dictionary, artifact_file, run_id)
+[2025-08-12T13:29:41.708+0000] {subprocess.py:93} INFO -    1140 """
+[2025-08-12T13:29:41.709+0000] {subprocess.py:93} INFO -    1141 Log a JSON/YAML-serializable object (e.g. `dict`) as an artifact. The serialization
+[2025-08-12T13:29:41.709+0000] {subprocess.py:93} INFO -    1142 format (JSON or YAML) is automatically inferred from the extension of `artifact_file`.
+[2025-08-12T13:29:41.709+0000] {subprocess.py:93} INFO -    (...)   1170
+[2025-08-12T13:29:41.709+0000] {subprocess.py:93} INFO -    1171 """
+[2025-08-12T13:29:41.710+0000] {subprocess.py:93} INFO -    1172 run_id = run_id or _get_or_start_run().info.run_id
+[2025-08-12T13:29:41.710+0000] {subprocess.py:93} INFO - -> 1173 MlflowClient().log_dict(run_id, dictionary, artifact_file)
+[2025-08-12T13:29:41.710+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.710+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/client.py:2071, in MlflowClient.log_dict(self, run_id, dictionary, artifact_file)
+[2025-08-12T13:29:41.711+0000] {subprocess.py:93} INFO -    2035 """Log a JSON/YAML-serializable object (e.g. `dict`) as an artifact. The serialization
+[2025-08-12T13:29:41.711+0000] {subprocess.py:93} INFO -    2036 format (JSON or YAML) is automatically inferred from the extension of `artifact_file`.
+[2025-08-12T13:29:41.711+0000] {subprocess.py:93} INFO -    2037 If the file extension doesn't exist or match any of [".json", ".yml", ".yaml"],
+[2025-08-12T13:29:41.711+0000] {subprocess.py:93} INFO -    (...)   2067
+[2025-08-12T13:29:41.712+0000] {subprocess.py:93} INFO -    2068 """
+[2025-08-12T13:29:41.712+0000] {subprocess.py:93} INFO -    2069 extension = os.path.splitext(artifact_file)[1]
+[2025-08-12T13:29:41.712+0000] {subprocess.py:93} INFO - -> 2071 with self._log_artifact_helper(run_id, artifact_file) as tmp_path:
+[2025-08-12T13:29:41.713+0000] {subprocess.py:93} INFO -    2072     with open(tmp_path, "w") as f:
+[2025-08-12T13:29:41.713+0000] {subprocess.py:93} INFO -    2073         # Specify `indent` to prettify the output
+[2025-08-12T13:29:41.713+0000] {subprocess.py:93} INFO -    2074         if extension in [".yml", ".yaml"]:
+[2025-08-12T13:29:41.714+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.714+0000] {subprocess.py:93} INFO - File /usr/local/lib/python3.12/contextlib.py:144, in _GeneratorContextManager.__exit__(self, typ, value, traceback)
+[2025-08-12T13:29:41.714+0000] {subprocess.py:93} INFO -     142 if typ is None:
+[2025-08-12T13:29:41.715+0000] {subprocess.py:93} INFO -     143     try:
+[2025-08-12T13:29:41.715+0000] {subprocess.py:93} INFO - --> 144         next(self.gen)
+[2025-08-12T13:29:41.715+0000] {subprocess.py:93} INFO -     145     except StopIteration:
+[2025-08-12T13:29:41.715+0000] {subprocess.py:93} INFO -     146         return False
+[2025-08-12T13:29:41.716+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.716+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/client.py:1984, in MlflowClient._log_artifact_helper(self, run_id, artifact_file)
+[2025-08-12T13:29:41.716+0000] {subprocess.py:93} INFO -    1982 tmp_path = os.path.join(tmp_dir, filename)
+[2025-08-12T13:29:41.716+0000] {subprocess.py:93} INFO -    1983 yield tmp_path
+[2025-08-12T13:29:41.716+0000] {subprocess.py:93} INFO - -> 1984 self.log_artifact(run_id, tmp_path, artifact_dir)
+[2025-08-12T13:29:41.717+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.717+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/client.py:1915, in MlflowClient.log_artifact(self, run_id, local_path, artifact_path)
+[2025-08-12T13:29:41.717+0000] {subprocess.py:93} INFO -    1911 if run_id.startswith(TRACE_REQUEST_ID_PREFIX):
+[2025-08-12T13:29:41.718+0000] {subprocess.py:93} INFO -    1912     raise MlflowException(
+[2025-08-12T13:29:41.718+0000] {subprocess.py:93} INFO -    1913         f"Invalid run id: {run_id}. `log_artifact` run id must map to a valid run."
+[2025-08-12T13:29:41.718+0000] {subprocess.py:93} INFO -    1914     )
+[2025-08-12T13:29:41.719+0000] {subprocess.py:93} INFO - -> 1915 self._tracking_client.log_artifact(run_id, local_path, artifact_path)
+[2025-08-12T13:29:41.719+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.719+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/tracking/_tracking_service/client.py:810, in TrackingServiceClient.log_artifact(self, run_id, local_path, artifact_path)
+[2025-08-12T13:29:41.719+0000] {subprocess.py:93} INFO -     808     artifact_repo.log_artifacts(local_path, path_name)
+[2025-08-12T13:29:41.720+0000] {subprocess.py:93} INFO -     809 else:
+[2025-08-12T13:29:41.720+0000] {subprocess.py:93} INFO - --> 810     artifact_repo.log_artifact(local_path, artifact_path)
+[2025-08-12T13:29:41.720+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.721+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/store/artifact/local_artifact_repo.py:43, in LocalArtifactRepository.log_artifact(self, local_file, artifact_path)
+[2025-08-12T13:29:41.721+0000] {subprocess.py:93} INFO -      39 artifact_dir = (
+[2025-08-12T13:29:41.721+0000] {subprocess.py:93} INFO -      40     os.path.join(self.artifact_dir, artifact_path) if artifact_path else self.artifact_dir
+[2025-08-12T13:29:41.721+0000] {subprocess.py:93} INFO -      41 )
+[2025-08-12T13:29:41.722+0000] {subprocess.py:93} INFO -      42 if not os.path.exists(artifact_dir):
+[2025-08-12T13:29:41.722+0000] {subprocess.py:93} INFO - ---> 43     mkdir(artifact_dir)
+[2025-08-12T13:29:41.722+0000] {subprocess.py:93} INFO -      44 try:
+[2025-08-12T13:29:41.723+0000] {subprocess.py:93} INFO -      45     shutil.copy2(local_file, os.path.join(artifact_dir, os.path.basename(local_file)))
+[2025-08-12T13:29:41.723+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.723+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/utils/file_utils.py:214, in mkdir(root, name)
+[2025-08-12T13:29:41.723+0000] {subprocess.py:93} INFO -     212 except OSError as e:
+[2025-08-12T13:29:41.724+0000] {subprocess.py:93} INFO -     213     if e.errno != errno.EEXIST or not os.path.isdir(target):
+[2025-08-12T13:29:41.724+0000] {subprocess.py:93} INFO - --> 214         raise e
+[2025-08-12T13:29:41.724+0000] {subprocess.py:93} INFO -     215 return target
+[2025-08-12T13:29:41.725+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.725+0000] {subprocess.py:93} INFO - File ~/.local/lib/python3.12/site-packages/mlflow/utils/file_utils.py:211, in mkdir(root, name)
+[2025-08-12T13:29:41.725+0000] {subprocess.py:93} INFO -     209 target = os.path.join(root, name) if name is not None else root
+[2025-08-12T13:29:41.726+0000] {subprocess.py:93} INFO -     210 try:
+[2025-08-12T13:29:41.726+0000] {subprocess.py:93} INFO - --> 211     os.makedirs(target, exist_ok=True)
+[2025-08-12T13:29:41.726+0000] {subprocess.py:93} INFO -     212 except OSError as e:
+[2025-08-12T13:29:41.726+0000] {subprocess.py:93} INFO -     213     if e.errno != errno.EEXIST or not os.path.isdir(target):
+[2025-08-12T13:29:41.727+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.727+0000] {subprocess.py:93} INFO - File /usr/local/lib/python3.12/os.py:215, in makedirs(name, mode, exist_ok)
+[2025-08-12T13:29:41.727+0000] {subprocess.py:93} INFO -     213 if head and tail and not path.exists(head):
+[2025-08-12T13:29:41.727+0000] {subprocess.py:93} INFO -     214     try:
+[2025-08-12T13:29:41.728+0000] {subprocess.py:93} INFO - --> 215         makedirs(head, exist_ok=exist_ok)
+[2025-08-12T13:29:41.728+0000] {subprocess.py:93} INFO -     216     except FileExistsError:
+[2025-08-12T13:29:41.728+0000] {subprocess.py:93} INFO -     217         # Defeats race condition when another thread created the path
+[2025-08-12T13:29:41.729+0000] {subprocess.py:93} INFO -     218         pass
+[2025-08-12T13:29:41.729+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.730+0000] {subprocess.py:93} INFO - File /usr/local/lib/python3.12/os.py:215, in makedirs(name, mode, exist_ok)
+[2025-08-12T13:29:41.731+0000] {subprocess.py:93} INFO -     213 if head and tail and not path.exists(head):
+[2025-08-12T13:29:41.731+0000] {subprocess.py:93} INFO -     214     try:
+[2025-08-12T13:29:41.731+0000] {subprocess.py:93} INFO - --> 215         makedirs(head, exist_ok=exist_ok)
+[2025-08-12T13:29:41.732+0000] {subprocess.py:93} INFO -     216     except FileExistsError:
+[2025-08-12T13:29:41.732+0000] {subprocess.py:93} INFO -     217         # Defeats race condition when another thread created the path
+[2025-08-12T13:29:41.732+0000] {subprocess.py:93} INFO -     218         pass
+[2025-08-12T13:29:41.732+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.733+0000] {subprocess.py:93} INFO -     [... skipping similar frames: makedirs at line 215 (1 times)]
+[2025-08-12T13:29:41.733+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.733+0000] {subprocess.py:93} INFO - File /usr/local/lib/python3.12/os.py:215, in makedirs(name, mode, exist_ok)
+[2025-08-12T13:29:41.734+0000] {subprocess.py:93} INFO -     213 if head and tail and not path.exists(head):
+[2025-08-12T13:29:41.734+0000] {subprocess.py:93} INFO -     214     try:
+[2025-08-12T13:29:41.734+0000] {subprocess.py:93} INFO - --> 215         makedirs(head, exist_ok=exist_ok)
+[2025-08-12T13:29:41.734+0000] {subprocess.py:93} INFO -     216     except FileExistsError:
+[2025-08-12T13:29:41.735+0000] {subprocess.py:93} INFO -     217         # Defeats race condition when another thread created the path
+[2025-08-12T13:29:41.735+0000] {subprocess.py:93} INFO -     218         pass
+[2025-08-12T13:29:41.735+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.735+0000] {subprocess.py:93} INFO - File /usr/local/lib/python3.12/os.py:225, in makedirs(name, mode, exist_ok)
+[2025-08-12T13:29:41.736+0000] {subprocess.py:93} INFO -     223         return
+[2025-08-12T13:29:41.736+0000] {subprocess.py:93} INFO -     224 try:
+[2025-08-12T13:29:41.736+0000] {subprocess.py:93} INFO - --> 225     mkdir(name, mode)
+[2025-08-12T13:29:41.736+0000] {subprocess.py:93} INFO -     226 except OSError:
+[2025-08-12T13:29:41.737+0000] {subprocess.py:93} INFO -     227     # Cannot rely on checking for EEXIST, since the operating system
+[2025-08-12T13:29:41.737+0000] {subprocess.py:93} INFO -     228     # could give priority to other errors like EACCES or EROFS
+[2025-08-12T13:29:41.737+0000] {subprocess.py:93} INFO -     229     if not exist_ok or not path.isdir(name):
+[2025-08-12T13:29:41.738+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.738+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: '/mlflow'
+[2025-08-12T13:29:41.738+0000] {subprocess.py:93} INFO - 
+[2025-08-12T13:29:41.917+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-12T13:29:41.918+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-12T13:29:41.929+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-12T13:29:41.934+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=solar_flares_train_12h, task_id=train_notebook, run_id=scheduled__2025-08-12T00:00:00+00:00, execution_date=20250812T000000, start_date=20250812T132839, end_date=20250812T132941
+[2025-08-12T13:29:41.946+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 134 for task train_notebook (Bash command failed. The command returned a non-zero exit code 1.; 4783)
+[2025-08-12T13:29:41.977+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-12T13:29:41.992+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-12T13:29:42.009+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

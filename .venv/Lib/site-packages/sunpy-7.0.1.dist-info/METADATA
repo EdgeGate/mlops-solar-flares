@@ -1,0 +1,250 @@
+Metadata-Version: 2.4
+Name: sunpy
+Version: 7.0.1
+Summary: SunPy core package: Python for Solar Physics
+Author-email: The SunPy Community <sunpy@googlegroups.com>
+License: Copyright (c) 2013-2025 The SunPy developers
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are
+        met:
+        
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright
+          notice, this list of conditions and the following disclaimer in the
+          documentation and/or other materials provided with the distribution.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+        "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+        LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+        A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+        HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+        SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+        LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+        DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+        THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://sunpy.org
+Project-URL: Source Code, https://github.com/sunpy/sunpy
+Project-URL: Download, https://pypi.org/project/sunpy
+Project-URL: Documentation, https://docs.sunpy.org
+Project-URL: Changelog, https://docs.sunpy.org/en/stable/whatsnew/changelog.html
+Project-URL: Issue Tracker, https://github.com/sunpy/sunpy/issues
+Keywords: solar physics,solar,science,sun,wcs,coordinates
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides: sunpy
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE.rst
+Requires-Dist: astropy>=6.1.0
+Requires-Dist: numpy>=1.25.0
+Requires-Dist: packaging>=23.2
+Requires-Dist: parfive[ftp]>=2.1.0
+Requires-Dist: pyerfa>=2.0.1.1
+Requires-Dist: requests>=2.32.0
+Requires-Dist: fsspec>=2023.6.0
+Provides-Extra: asdf
+Requires-Dist: asdf-astropy>=0.5.0; extra == "asdf"
+Requires-Dist: asdf>=3.0.0; extra == "asdf"
+Provides-Extra: dask
+Requires-Dist: dask[array]>=2023.6.0; extra == "dask"
+Provides-Extra: image
+Requires-Dist: scipy>=1.11.0; extra == "image"
+Provides-Extra: jpeg2000
+Requires-Dist: glymur>=0.13.0; extra == "jpeg2000"
+Requires-Dist: lxml!=5.0.0,>=4.9.1; extra == "jpeg2000"
+Provides-Extra: map
+Requires-Dist: contourpy>=1.1.0; extra == "map"
+Requires-Dist: matplotlib>=3.8.0; extra == "map"
+Requires-Dist: mpl-animators>=1.2.0; extra == "map"
+Requires-Dist: reproject>=0.12.0; extra == "map"
+Requires-Dist: scipy>=1.11.0; extra == "map"
+Provides-Extra: opencv
+Requires-Dist: opencv-python>=4.8.0.74; extra == "opencv"
+Provides-Extra: net
+Requires-Dist: beautifulsoup4>=4.13.0; extra == "net"
+Requires-Dist: drms>=0.7.1; extra == "net"
+Requires-Dist: python-dateutil>=2.9.0; extra == "net"
+Requires-Dist: tqdm>=4.66.0; extra == "net"
+Requires-Dist: zeep>=4.3.0; extra == "net"
+Provides-Extra: scikit-image
+Requires-Dist: scikit-image>=0.21.0; extra == "scikit-image"
+Provides-Extra: spice
+Requires-Dist: spiceypy>=6.0.0; extra == "spice"
+Provides-Extra: timeseries
+Requires-Dist: cdflib>=1.3.2; extra == "timeseries"
+Requires-Dist: h5netcdf>=1.2.0; extra == "timeseries"
+Requires-Dist: h5py>=3.9.0; extra == "timeseries"
+Requires-Dist: matplotlib>=3.8.0; extra == "timeseries"
+Requires-Dist: pandas>=2.1.0; extra == "timeseries"
+Provides-Extra: visualization
+Requires-Dist: matplotlib>=3.8.0; extra == "visualization"
+Requires-Dist: mpl-animators>=1.2.0; extra == "visualization"
+Provides-Extra: core
+Requires-Dist: sunpy[image,map,net,timeseries,visualization]; extra == "core"
+Provides-Extra: all
+Requires-Dist: sunpy[asdf,core,jpeg2000,opencv,scikit-image,spice]; extra == "all"
+Provides-Extra: s3
+Requires-Dist: fsspec[s3]>=2023.6.0; extra == "s3"
+Requires-Dist: aiobotocore[boto3]>=2.6.0; extra == "s3"
+Provides-Extra: tests-only
+Requires-Dist: hvpy>=1.1.0; extra == "tests-only"
+Requires-Dist: jplephem>=2.19; extra == "tests-only"
+Requires-Dist: pytest-astropy>=0.11.0; extra == "tests-only"
+Requires-Dist: pytest-mpl>=0.17.0; extra == "tests-only"
+Requires-Dist: pytest>=7.4.0; extra == "tests-only"
+Provides-Extra: tests
+Requires-Dist: sunpy[all,s3,tests-only]; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.1.0; extra == "docs"
+Requires-Dist: sphinx-automodapi>=0.16.0; extra == "docs"
+Requires-Dist: packaging>=23.2; extra == "docs"
+Requires-Dist: sunpy[all]; extra == "docs"
+Requires-Dist: hvpy>=1.1.0; extra == "docs"
+Requires-Dist: ruamel.yaml>=0.18.0; extra == "docs"
+Requires-Dist: sphinx-changelog>=1.5.0; extra == "docs"
+Requires-Dist: sphinx-copybutton>=0.5.0; extra == "docs"
+Requires-Dist: sphinx-design>=0.5.0; extra == "docs"
+Requires-Dist: sphinx-gallery>=0.14.0; extra == "docs"
+Requires-Dist: sphinxext-opengraph>=0.9.0; extra == "docs"
+Requires-Dist: sunpy-sphinx-theme>=2.0.3; extra == "docs"
+Requires-Dist: sphinxcontrib-bibtex; extra == "docs"
+Provides-Extra: docs-gallery
+Requires-Dist: sunpy[docs]; extra == "docs-gallery"
+Requires-Dist: astroquery>=0.4.6; extra == "docs-gallery"
+Requires-Dist: jplephem>=2.19; extra == "docs-gallery"
+Provides-Extra: dev
+Requires-Dist: sunpy[docs,tests]; extra == "dev"
+Dynamic: license-file
+
+*********
+``sunpy``
+*********
+|SunPy Logo|
+
++-----------------------------------+-----------------------------------+-----------------------------------+
+|           Release                 |           Development             |           Community               |
++===================================+===================================+===================================+
+|       |Latest PyPi Version|       |        |Python Versions|          |         |Matrix Chat Room|        |
++-----------------------------------+-----------------------------------+-----------------------------------+
+|     |Latest Conda Version|        |     |Project Status: Active|      |     |OpenAstronomy Discourse|     |
++-----------------------------------+-----------------------------------+-----------------------------------+
+|      |Zenodo - Latest DOI|        |  |Continuous Integration Status|  |    |Google Groups Mailing List|   |
++-----------------------------------+-----------------------------------+-----------------------------------+
+|    |sunpy stable documentation|   |     |CodeCov Code Coverage|       |       |Powered by NumFOCUS|       |
++-----------------------------------+-----------------------------------+-----------------------------------+
+|         |sunpy citation|          |                                   |            |pyOpenSci|            |
++-----------------------------------+-----------------------------------+-----------------------------------+
+
+.. |SunPy Logo| image:: https://raw.githubusercontent.com/sunpy/sunpy-logo/master/generated/sunpy_logo_landscape.png
+   :width: 200px
+.. |Latest PyPi Version| image:: https://img.shields.io/pypi/v/sunpy.svg
+   :target: https://pypi.python.org/pypi/sunpy/
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/sunpy
+   :target: https://pypi.python.org/pypi/sunpy/
+.. |Matrix Chat Room| image:: https://img.shields.io/matrix/sunpy:openastronomy.org.svg?colorB=%23FE7900&label=Chat&logo=matrix&server_fqdn=matrix.org
+   :target: https://app.element.io/#/room/#sunpy:openastronomy.org
+.. |Latest Conda Version| image:: https://anaconda.org/conda-forge/sunpy/badges/version.svg
+   :target: https://anaconda.org/conda-forge/sunpy
+.. |Project Status: Active| image:: https://www.repostatus.org/badges/latest/active.svg
+   :target: https://www.repostatus.org/#active
+.. |OpenAstronomy Discourse| image:: https://cdck-file-uploads-global.s3.dualstack.us-west-2.amazonaws.com/try2/original/1X/5e1e3b3cada2d7fbae4734d4bc53999933d71c95.svg
+   :height: 20px
+   :target: https://community.openastronomy.org/
+.. |Zenodo - Latest DOI| image:: https://zenodo.org/badge/2165383.svg
+   :target: https://zenodo.org/badge/latestdoi/2165383
+.. |Continuous Integration Status| image:: https://github.com/sunpy/sunpy/actions/workflows/ci.yml/badge.svg?branch=main
+   :target: https://github.com/sunpy/sunpy/actions/workflows/ci.yml
+.. |Google Groups Mailing List| image:: https://upload.wikimedia.org/wikipedia/commons/2/27/Google_Groups_logo.gif
+   :height: 20px
+   :target: https://groups.google.com/g/sunpy
+.. |sunpy stable documentation| image:: https://readthedocs.org/projects/sunpy/badge/?version=stable
+   :target: https://docs.sunpy.org/
+.. |CodeCov Code Coverage| image:: https://codecov.io/gh/sunpy/sunpy/branch/main/graph/badge.svg
+   :target: https://codecov.io/gh/sunpy/sunpy
+.. |Powered by NumFOCUS| image:: https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A
+   :target: https://numfocus.org
+.. |sunpy citation| image:: https://img.shields.io/badge/cite-sunpy-orange
+   :target: https://docs.sunpy.org/en/stable/citation.html
+.. |pyOpenSci| image:: https://tinyurl.com/y22nb8up
+   :target: https://github.com/pyOpenSci/software-submission/issues/147
+
+``sunpy`` is a Python software package that provides fundamental tools for accessing, loading and interacting with solar physics data in Python.
+It includes an interface for searching and downloading data from multiple data providers, data containers for image and time series data, commonly used solar coordinate frames and associated transformations, as well as other functionality needed for solar data analysis.
+
+Installation
+============
+
+We recommended following the `installation guide <https://docs.sunpy.org/en/stable/guide/installation.html>`__ in the ``sunpy`` documentation.
+This will walk you through installing ``sunpy`` and all of its dependencies.
+
+Usage
+=====
+
+If you are new to ``sunpy``, the best place to start is the `tutorial <https://docs.sunpy.org/en/stable/tutorial/index.html>`__.
+the `example gallery <https://docs.sunpy.org/en/stable/generated/gallery/index.html>`__ also includes a collection of shorter and more specific examples of using ``sunpy``.
+
+Changes
+=======
+
+See our `changelog <https://docs.sunpy.org/en/stable/whatsnew/changelog.html>`__. for the latest changes in ``sunpy``.
+
+Getting Help
+============
+
+For more information or to ask questions about ``sunpy`` or any other SunPy Project package, please check out:
+
+-  `sunpy documentation <https://docs.sunpy.org/en/stable/>`__
+-  `SunPy Affiliated Packages <https://sunpy.org/affiliated>`__
+-  `SunPy Chat`_
+-  `SunPy mailing list <https://groups.google.com/forum/#!forum/sunpy>`__
+-  `SunPy Community forum <https://community.openastronomy.org/c/sunpy/5>`__
+
+Acknowledging or Citing ``sunpy``
+=================================
+
+If you use ``sunpy`` in your scientific work, we would appreciate your `citing it in your publications <https://docs.sunpy.org/en/stable/citation.html>`__.
+The continued growth and development of ``sunpy`` is dependent on the community being aware of ``sunpy``.
+
+Contributing
+============
+
+The SunPy Project is a community-driven open-source project that welcomes any and all contributions.
+Whether you are a developer, student, or user, you can help by contributing code, documentation, or community support.
+
+If you would like to get involved, the `Newcomers Guide`_ guide explains the many different ways to contribute to the SunPy Project and also shows how to get set up with a development workflow.
+
+Help is always welcome, so come and say hello by joining the `SunPy Chat`_ and look over the `Good First Issues list`_ for the ideal places to start.
+
+.. _Newcomers Guide: https://docs.sunpy.org/en/latest/dev_guide/contents/newcomers.html
+.. _Good First Issues list: https://github.com/sunpy/sunpy/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22Good+First+Issue%22
+
+Usage of Generative AI
+======================
+
+We expect authentic engagement in our community.
+Be wary of posting output from Large Language Models or similar generative AI as comments on GitHub or any other platform, as such comments tend to be formulaic and low quality content.
+If you use generative AI tools as an aid in developing code or documentation changes, ensure that you fully understand the proposed changes and can explain why they are the correct approach and an improvement to the current state.
+
+Code of Conduct
+===============
+
+When you are interacting with the SunPy Community you are asked to follow our `Code of Conduct <https://sunpy.org/coc>`__.
+
+.. _SunPy Chat: https://app.element.io/#/room/#sunpy:openastronomy.org

@@ -1,0 +1,122 @@
+[2025-08-09T19:07:34.919+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-09T19:07:34.957+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:07:34.966+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:07:34.974+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-09T19:07:34.988+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): backfill_ncei_yesterday> on 2025-08-09 00:00:00+00:00
+[2025-08-09T19:07:34.996+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'backfill_ncei_yesterday', 'scheduled__2025-08-09T00:00:00+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmp1pp2_28t']
+[2025-08-09T19:07:34.999+0000] {standard_task_runner.py:91} INFO - Job 48: Subtask backfill_ncei_yesterday
+[2025-08-09T19:07:35.000+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=257) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-09T19:07:35.001+0000] {standard_task_runner.py:63} INFO - Started process 258 to run task
+[2025-08-09T19:07:35.063+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [running]> on host 7ed3e7742fef
+[2025-08-09T19:07:35.168+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='backfill_ncei_yesterday' AIRFLOW_CTX_EXECUTION_DATE='2025-08-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-09T00:00:00+00:00'
+[2025-08-09T19:07:35.169+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-09T19:07:35.198+0000] {logging_mixin.py:188} INFO - → Running (cwd=/opt/project): python /opt/project/src/data/xrs_update.py --mode backfill --start {{ ds }} --end {{ ds }}
+[2025-08-09T19:07:35.271+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-09T19:07:35.272+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/xrs_update_daily.py", line 31, in <lambda>
+    python_callable=lambda: run(PY + ["--mode","backfill","--start","{{ ds }}","--end","{{ ds }}"])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/xrs_update_daily.py", line 14, in run
+    raise RuntimeError(f"Command failed with code {p.returncode}")
+RuntimeError: Command failed with code 2
+[2025-08-09T19:07:35.285+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=xrs_update_12h, task_id=backfill_ncei_yesterday, run_id=scheduled__2025-08-09T00:00:00+00:00, execution_date=20250809T000000, start_date=20250809T190734, end_date=20250809T190735
+[2025-08-09T19:07:35.296+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 48 for task backfill_ncei_yesterday (Command failed with code 2; 258)
+[2025-08-09T19:07:35.335+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-09T19:07:35.369+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-09T19:07:35.386+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-08-09T19:27:47.232+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-09T19:27:47.274+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:27:47.284+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:27:47.284+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-09T19:27:47.307+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): backfill_ncei_yesterday> on 2025-08-09 00:00:00+00:00
+[2025-08-09T19:27:47.317+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'backfill_ncei_yesterday', 'scheduled__2025-08-09T00:00:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmp84o8ocmh']
+[2025-08-09T19:27:47.320+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=235) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-09T19:27:47.320+0000] {standard_task_runner.py:91} INFO - Job 53: Subtask backfill_ncei_yesterday
+[2025-08-09T19:27:47.321+0000] {standard_task_runner.py:63} INFO - Started process 236 to run task
+[2025-08-09T19:27:47.395+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [running]> on host 9d4e07229e62
+[2025-08-09T19:27:47.466+0000] {abstractoperator.py:725} ERROR - Exception rendering Jinja template for task 'backfill_ncei_yesterday', field 'bash_command'. Template: 'python /opt/project/src/data/xrs_update.py --mode backfill --start {{ (ds | ds_add(-1)) }} --end {{ (ds | ds_add(-1)) }}'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 717, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 168, in render_template
+    template = jinja_env.from_string(value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 1108, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 1, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'ds_add'.
+[2025-08-09T19:27:47.468+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2479, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2633, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1337, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/abstractoperator.py", line 717, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/template/templater.py", line 168, in render_template
+    template = jinja_env.from_string(value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 1108, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+                               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/home/airflow/.local/lib/python3.12/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 1, in template
+jinja2.exceptions.TemplateAssertionError: No filter named 'ds_add'.
+[2025-08-09T19:27:47.483+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=xrs_update_12h, task_id=backfill_ncei_yesterday, run_id=scheduled__2025-08-09T00:00:00+00:00, execution_date=20250809T000000, start_date=20250809T192747, end_date=20250809T192747
+[2025-08-09T19:27:47.504+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 53 for task backfill_ncei_yesterday (No filter named 'ds_add'.; 236)
+[2025-08-09T19:27:47.535+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-09T19:27:47.563+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-09T19:27:47.574+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-08-09T19:48:49.970+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-09T19:48:50.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:48:50.026+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [queued]>
+[2025-08-09T19:48:50.027+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-09T19:48:50.050+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): backfill_ncei_yesterday> on 2025-08-09 00:00:00+00:00
+[2025-08-09T19:48:50.060+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'backfill_ncei_yesterday', 'scheduled__2025-08-09T00:00:00+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmprw136uy8']
+[2025-08-09T19:48:50.063+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=478) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-09T19:48:50.064+0000] {standard_task_runner.py:91} INFO - Job 63: Subtask backfill_ncei_yesterday
+[2025-08-09T19:48:50.064+0000] {standard_task_runner.py:63} INFO - Started process 479 to run task
+[2025-08-09T19:48:50.143+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.backfill_ncei_yesterday scheduled__2025-08-09T00:00:00+00:00 [running]> on host 9d4e07229e62
+[2025-08-09T19:48:50.272+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='backfill_ncei_yesterday' AIRFLOW_CTX_EXECUTION_DATE='2025-08-09T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-09T00:00:00+00:00'
+[2025-08-09T19:48:50.274+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-09T19:48:50.290+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-09T19:48:50.292+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/project/src/data/xrs_update.py --mode backfill --start 2025-08-08 --end 2025-08-08']
+[2025-08-09T19:48:50.317+0000] {subprocess.py:86} INFO - Output:
+[2025-08-09T19:48:54.526+0000] {subprocess.py:93} INFO - [DONE] backfill complete -> rows=0
+[2025-08-09T19:48:54.689+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-08-09T19:48:54.690+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-09T19:48:54.728+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=xrs_update_12h, task_id=backfill_ncei_yesterday, run_id=scheduled__2025-08-09T00:00:00+00:00, execution_date=20250809T000000, start_date=20250809T194850, end_date=20250809T194854
+[2025-08-09T19:48:54.789+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-09T19:48:54.809+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-09T19:48:54.812+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

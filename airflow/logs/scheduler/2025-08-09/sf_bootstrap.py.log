@@ -1,0 +1,270 @@
+[2025-08-09T15:41:06.452+0000] {processor.py:161} INFO - Started process (PID=1449) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:06.453+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:41:06.454+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:06.454+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:06.479+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:06.630+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:06.630+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:41:06.649+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:06.649+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:41:06.667+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.222 seconds
+[2025-08-09T15:41:36.920+0000] {processor.py:161} INFO - Started process (PID=1454) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:36.921+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:41:36.922+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:36.921+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:36.938+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:41:36.974+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:36.973+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:41:36.993+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:41:36.993+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:41:37.005+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.093 seconds
+[2025-08-09T15:42:09.480+0000] {processor.py:161} INFO - Started process (PID=1459) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:09.481+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:42:09.482+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:09.482+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:09.496+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:09.525+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:09.524+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:42:09.542+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:09.542+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:42:09.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.090 seconds
+[2025-08-09T15:42:42.969+0000] {processor.py:161} INFO - Started process (PID=1464) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:42.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:42:42.971+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:42.971+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:42.988+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:42:43.024+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:43.024+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:42:43.047+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:42:43.046+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:42:43.065+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.105 seconds
+[2025-08-09T15:43:16.498+0000] {processor.py:161} INFO - Started process (PID=1469) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:16.499+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:43:16.500+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:16.499+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:16.516+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:16.545+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:16.545+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:43:16.564+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:16.564+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:43:16.581+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.091 seconds
+[2025-08-09T15:43:49.907+0000] {processor.py:161} INFO - Started process (PID=1474) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:49.908+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:43:49.908+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:49.908+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:49.925+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:43:49.953+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:49.953+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:43:49.971+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:43:49.971+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:43:49.992+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.092 seconds
+[2025-08-09T15:44:23.421+0000] {processor.py:161} INFO - Started process (PID=1479) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:23.422+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:44:23.423+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:23.422+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:23.440+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:23.469+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:23.468+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:44:23.489+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:23.489+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:44:23.503+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.089 seconds
+[2025-08-09T15:44:53.729+0000] {processor.py:161} INFO - Started process (PID=1484) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:53.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:44:53.731+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:53.731+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:53.750+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:44:55.984+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:55.984+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:44:56.003+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:44:56.003+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:35:00+00:00, run_after=2025-08-09 15:40:00+00:00
+[2025-08-09T15:44:56.016+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.086 seconds
+[2025-08-09T15:45:29.413+0000] {processor.py:161} INFO - Started process (PID=1489) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:29.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:45:29.415+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:29.415+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:29.432+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_realtime' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:29.466+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:29.466+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:45:29.484+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:29.484+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_realtime to 2025-08-09 15:40:00+00:00, run_after=2025-08-09 15:45:00+00:00
+[2025-08-09T15:45:29.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.094 seconds
+[2025-08-09T15:45:32.517+0000] {processor.py:161} INFO - Started process (PID=1494) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:32.518+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:45:32.519+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:32.546+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:45:32.640+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.640+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:sf_bootstrap
+[2025-08-09T15:45:32.650+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.649+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:sf_bootstrap
+[2025-08-09T15:45:32.656+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.656+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:sf_bootstrap
+[2025-08-09T15:45:32.657+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.657+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:45:32.666+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.666+0000] {dag.py:3118} INFO - Creating ORM DAG for sf_bootstrap
+[2025-08-09T15:45:32.667+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:45:32.667+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:45:32.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.181 seconds
+[2025-08-09T15:46:02.906+0000] {processor.py:161} INFO - Started process (PID=1499) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:02.907+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:46:02.908+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:02.908+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:02.925+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:02.958+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:02.958+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:46:02.970+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:02.970+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:46:02.988+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.089 seconds
+[2025-08-09T15:46:36.517+0000] {processor.py:161} INFO - Started process (PID=1509) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:36.518+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:46:36.519+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:36.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:36.533+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:46:36.561+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:36.561+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:46:36.572+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:46:36.572+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:46:36.587+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.077 seconds
+[2025-08-09T15:47:10.123+0000] {processor.py:161} INFO - Started process (PID=1522) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:10.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:47:10.125+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:10.125+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:10.139+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:10.165+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:10.165+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:47:10.175+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:10.174+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:47:10.191+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.075 seconds
+[2025-08-09T15:47:42.739+0000] {processor.py:161} INFO - Started process (PID=1532) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:42.740+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:47:42.741+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:42.740+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:42.753+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:47:42.779+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:42.779+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:47:42.790+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:47:42.789+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:47:42.815+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.084 seconds
+[2025-08-09T15:48:16.230+0000] {processor.py:161} INFO - Started process (PID=1542) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:16.231+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:48:16.232+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:16.231+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:16.244+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:16.273+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:16.273+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:48:16.282+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:16.282+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:48:16.304+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.082 seconds
+[2025-08-09T15:48:49.805+0000] {processor.py:161} INFO - Started process (PID=1552) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:49.806+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:48:49.807+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:49.807+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:49.821+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:48:49.845+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:49.845+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:48:49.855+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:48:49.855+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:48:49.871+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.076 seconds
+[2025-08-09T15:49:23.404+0000] {processor.py:161} INFO - Started process (PID=1562) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:23.405+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:49:23.405+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:23.405+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:23.420+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:23.446+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:23.446+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:49:23.456+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:23.456+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:49:23.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.082 seconds
+[2025-08-09T15:49:55.907+0000] {processor.py:161} INFO - Started process (PID=1572) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:55.908+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:49:55.908+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:55.908+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:55.920+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:49:55.946+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:55.946+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:49:55.956+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:49:55.956+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:49:55.970+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.070 seconds
+[2025-08-09T15:50:29.480+0000] {processor.py:161} INFO - Started process (PID=1582) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:50:29.481+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:50:29.481+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:50:29.481+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:50:29.496+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:50:29.524+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:50:29.524+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:50:29.535+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:50:29.535+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:50:29.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.088 seconds
+[2025-08-09T15:51:02.982+0000] {processor.py:161} INFO - Started process (PID=1592) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:02.983+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:51:02.983+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:02.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:02.996+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:03.022+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:03.021+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:51:03.032+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:03.032+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:51:03.055+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.080 seconds
+[2025-08-09T15:51:36.532+0000] {processor.py:161} INFO - Started process (PID=1602) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:36.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:51:36.533+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:36.533+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:36.545+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:51:36.573+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:36.573+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:51:36.583+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:51:36.582+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:51:36.597+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.073 seconds
+[2025-08-09T15:52:06.875+0000] {processor.py:161} INFO - Started process (PID=1612) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:06.875+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:52:06.876+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:06.876+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:06.889+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:06.921+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:06.921+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:52:09.146+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:09.146+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:52:09.163+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.084 seconds
+[2025-08-09T15:52:42.591+0000] {processor.py:161} INFO - Started process (PID=1622) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:42.592+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:52:42.593+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:42.593+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:42.607+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:52:42.636+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:42.636+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:52:42.646+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:52:42.646+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:52:42.661+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.078 seconds
+[2025-08-09T15:53:16.200+0000] {processor.py:161} INFO - Started process (PID=1632) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:16.201+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:53:16.202+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:16.201+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:16.223+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:16.259+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:16.259+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:53:16.270+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:16.270+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:53:16.285+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.096 seconds
+[2025-08-09T15:53:49.762+0000] {processor.py:161} INFO - Started process (PID=1642) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:49.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:53:49.764+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:49.764+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:49.778+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:53:49.805+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:49.805+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:53:49.816+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:53:49.816+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:53:49.838+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.082 seconds
+[2025-08-09T15:54:23.269+0000] {processor.py:161} INFO - Started process (PID=1652) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:23.269+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:54:23.270+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:23.270+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:23.283+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:23.309+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:23.309+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:54:23.318+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:23.318+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:54:23.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.073 seconds
+[2025-08-09T15:54:55.833+0000] {processor.py:161} INFO - Started process (PID=1662) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:55.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:54:55.834+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:55.834+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:55.847+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:54:55.871+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:55.871+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:54:55.883+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:54:55.882+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:54:55.899+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.074 seconds
+[2025-08-09T15:55:29.440+0000] {processor.py:161} INFO - Started process (PID=1672) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:55:29.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:55:29.441+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:55:29.441+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:55:29.457+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:55:29.485+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:55:29.485+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:55:29.496+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:55:29.496+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:55:29.522+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.090 seconds
+[2025-08-09T15:56:02.937+0000] {processor.py:161} INFO - Started process (PID=1682) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:02.938+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:56:02.939+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:02.938+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:02.954+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:02.986+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:02.986+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:56:02.998+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:02.998+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:56:03.022+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.092 seconds
+[2025-08-09T15:56:36.550+0000] {processor.py:161} INFO - Started process (PID=1692) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:36.551+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:56:36.552+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:36.551+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:36.567+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:56:36.592+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:36.592+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:56:36.603+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:56:36.603+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:56:36.625+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.082 seconds
+[2025-08-09T15:57:06.843+0000] {processor.py:161} INFO - Started process (PID=1702) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:06.844+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:57:06.844+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:06.844+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:06.858+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:09.094+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:09.094+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:57:09.105+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:09.105+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:57:09.123+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.078 seconds
+[2025-08-09T15:57:42.626+0000] {processor.py:161} INFO - Started process (PID=1712) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:42.627+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:57:42.628+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:42.627+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:42.640+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:57:42.666+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:42.666+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:57:42.676+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:57:42.676+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:57:42.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.071 seconds
+[2025-08-09T15:58:16.175+0000] {processor.py:161} INFO - Started process (PID=1722) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:16.176+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:58:16.177+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:16.177+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:16.189+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:16.214+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:16.214+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:58:16.224+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:16.223+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:58:16.238+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.070 seconds
+[2025-08-09T15:58:49.772+0000] {processor.py:161} INFO - Started process (PID=1732) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:49.773+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:58:49.774+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:49.774+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:49.789+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:58:49.814+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:49.814+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:58:49.824+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:58:49.823+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:58:49.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.076 seconds
+[2025-08-09T15:59:20.151+0000] {processor.py:161} INFO - Started process (PID=1742) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:20.152+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:59:20.153+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:20.153+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:20.167+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:22.404+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:22.403+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:59:22.415+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:22.415+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:59:22.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.076 seconds
+[2025-08-09T15:59:55.959+0000] {processor.py:161} INFO - Started process (PID=1752) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:55.959+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T15:59:55.960+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:55.960+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:55.973+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T15:59:55.999+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:55.999+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T15:59:56.009+0000] {logging_mixin.py:188} INFO - [2025-08-09T15:59:56.009+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T15:59:56.033+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.081 seconds
+[2025-08-09T16:00:29.465+0000] {processor.py:161} INFO - Started process (PID=1762) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:00:29.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T16:00:29.467+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:00:29.466+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:00:29.482+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:00:29.510+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:00:29.510+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T16:00:29.521+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:00:29.521+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T16:00:29.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.089 seconds
+[2025-08-09T16:01:03.036+0000] {processor.py:161} INFO - Started process (PID=1772) to work on /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:01:03.037+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sf_bootstrap.py for tasks to queue
+[2025-08-09T16:01:03.038+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:01:03.037+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:01:03.052+0000] {processor.py:840} INFO - DAG(s) 'sf_bootstrap' retrieved from /opt/airflow/dags/sf_bootstrap.py
+[2025-08-09T16:01:03.082+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:01:03.082+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-09T16:01:03.092+0000] {logging_mixin.py:188} INFO - [2025-08-09T16:01:03.092+0000] {dag.py:3954} INFO - Setting next_dagrun for sf_bootstrap to None, run_after=None
+[2025-08-09T16:01:03.117+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sf_bootstrap.py took 0.090 seconds

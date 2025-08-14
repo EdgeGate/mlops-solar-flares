@@ -1,0 +1,46 @@
+[2025-08-09T19:41:54.600+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-09T19:41:54.645+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent manual__2025-08-09T19:31:30.463747+00:00 [queued]>
+[2025-08-09T19:41:54.654+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: xrs_update_12h.update_swpc_recent manual__2025-08-09T19:31:30.463747+00:00 [queued]>
+[2025-08-09T19:41:54.663+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2025-08-09T19:41:54.677+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): update_swpc_recent> on 2025-08-09 19:31:30.463747+00:00
+[2025-08-09T19:41:54.690+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'xrs_update_12h', 'update_swpc_recent', 'manual__2025-08-09T19:31:30.463747+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/xrs_update_daily.py', '--cfg-path', '/tmp/tmpz5zdx7dc']
+[2025-08-09T19:41:54.693+0000] {standard_task_runner.py:91} INFO - Job 58: Subtask update_swpc_recent
+[2025-08-09T19:41:54.693+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=366) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-09T19:41:54.694+0000] {standard_task_runner.py:63} INFO - Started process 367 to run task
+[2025-08-09T19:41:54.811+0000] {task_command.py:426} INFO - Running <TaskInstance: xrs_update_12h.update_swpc_recent manual__2025-08-09T19:31:30.463747+00:00 [running]> on host 9d4e07229e62
+[2025-08-09T19:41:54.971+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='xrs_update_12h' AIRFLOW_CTX_TASK_ID='update_swpc_recent' AIRFLOW_CTX_EXECUTION_DATE='2025-08-09T19:31:30.463747+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-09T19:31:30.463747+00:00'
+[2025-08-09T19:41:54.972+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-09T19:41:54.990+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-08-09T19:41:54.992+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/project/src/data/xrs_update.py --mode update --since-minutes 20160 --keep-days 180']
+[2025-08-09T19:41:55.009+0000] {subprocess.py:86} INFO - Output:
+[2025-08-09T19:41:57.887+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-08-09T19:41:57.888+0000] {subprocess.py:93} INFO -   File "/opt/project/src/data/xrs_update.py", line 215, in <module>
+[2025-08-09T19:41:57.892+0000] {subprocess.py:93} INFO -     main()
+[2025-08-09T19:41:57.892+0000] {subprocess.py:93} INFO -   File "/opt/project/src/data/xrs_update.py", line 212, in main
+[2025-08-09T19:41:57.896+0000] {subprocess.py:93} INFO -     update_since(args.since_minutes, args.keep_days)
+[2025-08-09T19:41:57.896+0000] {subprocess.py:93} INFO -   File "/opt/project/src/data/xrs_update.py", line 191, in update_since
+[2025-08-09T19:41:57.899+0000] {subprocess.py:93} INFO -     cutoff = pd.Timestamp.utcnow().tz_localize("UTC") - pd.Timedelta(days=keep_days)
+[2025-08-09T19:41:57.899+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-08-09T19:41:57.900+0000] {subprocess.py:93} INFO -   File "timestamps.pyx", line 2336, in pandas._libs.tslibs.timestamps.Timestamp.tz_localize
+[2025-08-09T19:41:57.901+0000] {subprocess.py:93} INFO - TypeError: Cannot localize tz-aware Timestamp, use tz_convert for conversions
+[2025-08-09T19:41:58.065+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-08-09T19:41:58.067+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-09T19:41:58.082+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-08-09T19:41:58.086+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=xrs_update_12h, task_id=update_swpc_recent, run_id=manual__2025-08-09T19:31:30.463747+00:00, execution_date=20250809T193130, start_date=20250809T194154, end_date=20250809T194158
+[2025-08-09T19:41:58.101+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 58 for task update_swpc_recent (Bash command failed. The command returned a non-zero exit code 1.; 367)
+[2025-08-09T19:41:58.140+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-08-09T19:41:58.162+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-09T19:41:58.166+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

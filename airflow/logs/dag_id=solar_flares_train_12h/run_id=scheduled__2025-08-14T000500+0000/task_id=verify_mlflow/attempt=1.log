@@ -1,0 +1,19 @@
+[2025-08-14T13:32:20.623+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-14T13:32:20.685+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: solar_flares_train_12h.verify_mlflow scheduled__2025-08-14T00:05:00+00:00 [queued]>
+[2025-08-14T13:32:20.698+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: solar_flares_train_12h.verify_mlflow scheduled__2025-08-14T00:05:00+00:00 [queued]>
+[2025-08-14T13:32:20.700+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-08-14T13:32:20.720+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): verify_mlflow> on 2025-08-14 00:05:00+00:00
+[2025-08-14T13:32:20.735+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=7432) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-08-14T13:32:20.733+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'solar_flares_train_12h', 'verify_mlflow', 'scheduled__2025-08-14T00:05:00+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/solar_flares_train_12h.py', '--cfg-path', '/tmp/tmps797p_w3']
+[2025-08-14T13:32:20.737+0000] {standard_task_runner.py:63} INFO - Started process 7433 to run task
+[2025-08-14T13:32:20.737+0000] {standard_task_runner.py:91} INFO - Job 189: Subtask verify_mlflow
+[2025-08-14T13:32:20.817+0000] {task_command.py:426} INFO - Running <TaskInstance: solar_flares_train_12h.verify_mlflow scheduled__2025-08-14T00:05:00+00:00 [running]> on host def4e694b617
+[2025-08-14T13:32:20.967+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='you' AIRFLOW_CTX_DAG_ID='solar_flares_train_12h' AIRFLOW_CTX_TASK_ID='verify_mlflow' AIRFLOW_CTX_EXECUTION_DATE='2025-08-14T00:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-14T00:05:00+00:00'
+[2025-08-14T13:32:20.968+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-14T13:32:23.916+0000] {logging_mixin.py:188} INFO - ✅ Vérif MLflow OK: run 5a6beac22fcb44b086fe9e7902f570ff, version v16 READY
+[2025-08-14T13:32:23.917+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-08-14T13:32:23.918+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-14T13:32:23.931+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=solar_flares_train_12h, task_id=verify_mlflow, run_id=scheduled__2025-08-14T00:05:00+00:00, execution_date=20250814T000500, start_date=20250814T133220, end_date=20250814T133223
+[2025-08-14T13:32:24.003+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-14T13:32:24.031+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-08-14T13:32:24.035+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

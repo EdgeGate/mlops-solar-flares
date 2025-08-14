@@ -1,0 +1,53 @@
+# docker-compose.prod.yml
+version: "3.9"
+
+services:
+  postgres-mlflow:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: ${PG_PASSWORD:-mlflow}
+      POSTGRES_DB: mlflow
+    volumes:
+      - postgres-mlflow-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mlflow"]
+      interval: 5s
+      retries: 10
+    restart: unless-stopped
+
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.mlflow
+    depends_on:
+      postgres-mlflow:
+        condition: service_healthy
+    environment:
+      MLFLOW_BACKEND_STORE_URI: postgresql+psycopg2://mlflow:${PG_PASSWORD:-mlflow}@postgres-mlflow/mlflow
+      MLFLOW_ARTIFACTS_DESTINATION: file:///mlflow/mlruns
+    volumes:
+      - ./mlruns:/mlflow/mlruns
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  api:
+    image: ${API_IMAGE}  # fourni par la CD
+    environment:
+      MLFLOW_TRACKING_URI: ${MLFLOW_TRACKING_URI:-http://mlflow:5000}
+      MODEL_NAME: solar-flares-classifier
+      MODEL_ALIAS: Production
+    depends_on:
+      - mlflow
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/ready"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+volumes:
+  postgres-mlflow-data:
