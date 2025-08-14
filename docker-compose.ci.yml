@@ -1,4 +1,3 @@
-# docker-compose.ci.yml
 services:
   postgres-mlflow:
     image: postgres:15
@@ -27,7 +26,10 @@ services:
       - "5000:5000"
 
   api:
-    image: ${API_IMAGE}   # injecté par le workflow CI
+    image: ${API_IMAGE:-local/solar-flares-api:test}  # défaut si la variable est absente
+    build:                                           # -> Compose sait construire si l’image n’existe pas
+      context: ./api
+      dockerfile: Dockerfile
     environment:
       MLFLOW_TRACKING_URI: http://mlflow:5000
       MODEL_NAME: solar-flares-classifier
