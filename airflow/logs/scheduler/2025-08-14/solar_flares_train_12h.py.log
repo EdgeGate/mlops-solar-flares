@@ -2708,3 +2708,122 @@
 [2025-08-14T19:04:47.057+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:04:47.057+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-08-14T19:04:47.075+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:04:47.075+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
 [2025-08-14T19:04:47.092+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.090 seconds
+[2025-08-14T19:05:17.480+0000] {processor.py:161} INFO - Started process (PID=11217) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:17.480+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:05:17.482+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:17.481+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:17.496+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:17.518+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:17.518+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:05:17.532+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:17.531+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:05:17.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.071 seconds
+[2025-08-14T19:05:48.045+0000] {processor.py:161} INFO - Started process (PID=11227) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:48.046+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:05:48.047+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:48.047+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:48.067+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:05:48.096+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:48.096+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:05:48.115+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:05:48.114+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:05:48.133+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.098 seconds
+[2025-08-14T19:06:18.585+0000] {processor.py:161} INFO - Started process (PID=11237) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:18.586+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:06:18.588+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:18.588+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:18.605+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:18.636+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:18.635+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:06:18.655+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:18.655+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:06:18.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.098 seconds
+[2025-08-14T19:06:50.108+0000] {processor.py:161} INFO - Started process (PID=11242) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:50.109+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:06:50.111+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:50.110+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:50.129+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:06:50.156+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:50.156+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:06:50.172+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:06:50.172+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:06:50.190+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.089 seconds
+[2025-08-14T19:07:23.499+0000] {processor.py:161} INFO - Started process (PID=11252) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:23.500+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:07:23.501+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:23.501+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:23.517+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:23.543+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:23.542+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:07:23.560+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:23.560+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:07:23.577+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.085 seconds
+[2025-08-14T19:07:57.066+0000] {processor.py:161} INFO - Started process (PID=11262) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:57.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:07:57.069+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:57.068+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:57.087+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:07:57.115+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:57.115+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:07:57.134+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:07:57.133+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:07:57.150+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.094 seconds
+[2025-08-14T19:08:30.631+0000] {processor.py:161} INFO - Started process (PID=11272) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:08:30.631+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:08:30.632+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:08:30.632+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:08:30.648+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:08:30.673+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:08:30.672+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:08:30.688+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:08:30.688+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:08:30.701+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.077 seconds
+[2025-08-14T19:09:03.086+0000] {processor.py:161} INFO - Started process (PID=11282) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:03.086+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:09:03.088+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:03.088+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:03.103+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:03.128+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:03.127+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:09:03.144+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:03.144+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:09:03.157+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.078 seconds
+[2025-08-14T19:09:36.526+0000] {processor.py:161} INFO - Started process (PID=11292) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:36.527+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:09:36.528+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:36.528+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:36.543+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:09:36.568+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:36.568+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:09:36.583+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:09:36.583+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:09:36.597+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.078 seconds
+[2025-08-14T19:10:10.129+0000] {processor.py:161} INFO - Started process (PID=11302) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:10.130+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:10:10.132+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:10.132+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:10.147+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:10.173+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:10.173+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:10:10.190+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:10.190+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:10:10.205+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.084 seconds
+[2025-08-14T19:10:43.630+0000] {processor.py:161} INFO - Started process (PID=11312) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:43.631+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:10:43.632+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:43.632+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:43.650+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:10:43.679+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:43.679+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:10:43.698+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:10:43.697+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:10:43.713+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.091 seconds
+[2025-08-14T19:11:17.205+0000] {processor.py:161} INFO - Started process (PID=11322) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:17.206+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:11:17.208+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:17.207+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:17.224+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:17.249+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:17.249+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:11:17.265+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:17.264+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:11:17.279+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.082 seconds
+[2025-08-14T19:11:49.668+0000] {processor.py:161} INFO - Started process (PID=11332) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:49.669+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:11:49.671+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:49.671+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:49.690+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:11:49.717+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:49.717+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:11:49.736+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:11:49.736+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:11:49.753+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.093 seconds
+[2025-08-14T19:12:23.157+0000] {processor.py:161} INFO - Started process (PID=11342) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:23.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:12:23.160+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:23.159+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:23.176+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:23.203+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:23.203+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:12:23.221+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:23.221+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:12:23.240+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.090 seconds
+[2025-08-14T19:12:56.666+0000] {processor.py:161} INFO - Started process (PID=11352) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:56.667+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:12:56.668+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:56.668+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:56.685+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:12:56.714+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:56.714+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:12:56.729+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:12:56.729+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:12:56.744+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.086 seconds
+[2025-08-14T19:13:30.217+0000] {processor.py:161} INFO - Started process (PID=11362) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:13:30.218+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:13:30.220+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:13:30.219+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:13:30.235+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:13:30.259+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:13:30.259+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:13:30.277+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:13:30.277+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:13:30.293+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.083 seconds
+[2025-08-14T19:14:02.779+0000] {processor.py:161} INFO - Started process (PID=11372) to work on /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:14:02.780+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/solar_flares_train_12h.py for tasks to queue
+[2025-08-14T19:14:02.782+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:14:02.781+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:14:02.799+0000] {processor.py:840} INFO - DAG(s) 'solar_flares_train_12h' retrieved from /opt/airflow/dags/solar_flares_train_12h.py
+[2025-08-14T19:14:02.823+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:14:02.823+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-08-14T19:14:02.840+0000] {logging_mixin.py:188} INFO - [2025-08-14T19:14:02.840+0000] {dag.py:3954} INFO - Setting next_dagrun for solar_flares_train_12h to 2025-08-14 12:10:00+00:00, run_after=2025-08-15 00:10:00+00:00
+[2025-08-14T19:14:02.859+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/solar_flares_train_12h.py took 0.087 seconds
