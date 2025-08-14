@@ -8,29 +8,23 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
+      # on définit les 2 pour que Compose voie toujours API_IMAGE
       IMAGE_TAG: local/solar-flares-api:test
+      API_IMAGE: local/solar-flares-api:test
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # (Optionnel) tests unitaires Python si tu en as
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps (optional)
+      - name: Install seed deps
         run: |
-          if [ -f api/requirements.txt ]; then
-            pip install -r api/requirements.txt pytest
-          fi
-
-      - name: Run unit tests (optional)
-        run: |
-          if [ -d tests ] || [ -d api/tests ]; then
-            pytest -q || true
-          fi
+          pip install --upgrade pip
+          pip install mlflow scikit-learn requests
 
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v3
@@ -43,31 +37,55 @@ jobs:
           load: true
           tags: ${{ env.IMAGE_TAG }}
 
-      - name: Launch minimal stack (mlflow + api)
-        env:
-          API_IMAGE: ${{ env.IMAGE_TAG }}
+      - name: Start MLflow only
         run: |
-          docker compose -f docker-compose.ci.yml up -d
-          # Attente simple
-          for i in {1..60}; do
+          set -e
+          docker compose -f docker-compose.ci.yml up -d mlflow
+          # attendre que le serveur réponde (max ~240s)
+          for i in {1..120}; do
+            if curl -sf http://localhost:5000/ >/dev/null; then
+              echo "MLflow ready"; break
+            fi
+            sleep 2
+            if [ $i -eq 120 ]; then
+              echo "MLflow not ready"; docker compose -f docker-compose.ci.yml logs mlflow || true
+              exit 1
+            fi
+          done
+
+      - name: Seed MLflow (alias Production)
+        env:
+          MLFLOW_TRACKING_URI: http://localhost:5000
+        run: python scripts/seed_ci.py
+
+      - name: Start API (wait until ready or fail)
+        run: |
+          set -e
+          docker compose -f docker-compose.ci.yml up -d api
+          # attendre /ready (max ~240s) et échouer si jamais prêt
+          for i in {1..120}; do
             if curl -sf http://localhost:8000/ready >/dev/null; then
               echo "API ready"; break
             fi
             sleep 2
+            if [ $i -eq 120 ]; then
+              echo "API did not become ready in time"
+              docker compose -f docker-compose.ci.yml logs api || true
+              exit 1
+            fi
           done
 
       - name: Smoke tests
         run: |
           set -e
-          curl -fsS http://localhost:8000/health >/dev/null
-          curl -fsS http://localhost:8000/ready  >/dev/null
+          curl -fsS http://localhost:8000/health  >/dev/null
+          curl -fsS http://localhost:8000/ready   >/dev/null
           curl -fsS http://localhost:8000/model-info | head -c 200 || true
 
       - name: Show logs on failure
         if: failure()
-        run: |
-          docker compose -f docker-compose.ci.yml logs --no-color || true
+        run: docker compose -f docker-compose.ci.yml logs --no-color || true
 
       - name: Tear down
         if: always()
-        run: docker compose -f docker-compose.ci.yml down -v
+        run: docker compose -f docker-compose.ci.yml down -v || true
