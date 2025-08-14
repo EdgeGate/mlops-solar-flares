@@ -1,18 +1,14 @@
-name: CD (build -> GHCR -> deploy SSH)
+name: CD (build -> GHCR)   # <- on retire le mot "deploy" du nom pour éviter la confusion
 
 on:
   push:
     branches: [ "main" ]
-  release:
-    types: [published]
   workflow_dispatch:
-    inputs:
-      tag:
-        description: "Tag d'image (optionnel)"
-        required: false
-  schedule:
-    # ⏰ Déploiement régulier (optionnel) — tous les jours à 02:00 Europe/Paris
-    - cron: "10 2 * * *"
+
+
+concurrency:
+  group: cd-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-push:
@@ -20,20 +16,12 @@ jobs:
     permissions:
       contents: read
       packages: write
-      id-token: write
-    outputs:
-      image: ${{ steps.meta.outputs.tags }}
-
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}/api
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Docker metadata
-        id: meta
+      - uses: actions/checkout@v4
+      - id: meta
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
@@ -41,78 +29,22 @@ jobs:
             type=ref,event=branch
             type=ref,event=tag
             type=sha
-            type=raw,value=${{ github.event.inputs.tag }},enable=${{ github.event.inputs.tag != '' }}
-
-      - name: Login GHCR
-        uses: docker/login-action@v3
+      - uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build & Push
-        uses: docker/build-push-action@v6
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
         with:
           context: api
           file: api/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
 
+  # ⬇️ JOB DEPLOY DÉSACTIVÉ TANT QU'ON N'A PAS DE SERVEUR/SECRETS
   deploy:
+    if: ${{ secrets.SSH_HOST != '' && secrets.SSH_USER != '' && secrets.SSH_KEY != '' }}
     runs-on: ubuntu-latest
-    needs: build-and-push
-    env:
-      IMAGE: ${{ needs.build-and-push.outputs.image }}
-      REMOTE_DIR: ~/mlops-solar-flares
-
     steps:
-      - name: Checkout (to send files)
-        uses: actions/checkout@v4
-
-      - name: Copy compose + scripts to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          source: "docker-compose.prod.yml,Dockerfile.mlflow,scripts/*"
-          target: "${{ env.REMOTE_DIR }}/"
-
-      - name: Write .env with image on server
-        uses: appleboy/ssh-action@v1.2.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            mkdir -p ${{ env.REMOTE_DIR }}
-            echo "API_IMAGE=${IMAGE%%,*}" > ${{ env.REMOTE_DIR }}/.env
-            echo "MLFLOW_TRACKING_URI=http://mlflow:5000" >> ${{ env.REMOTE_DIR }}/.env
-
-      - name: Deploy (remote)
-        uses: appleboy/ssh-action@v1.2.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            cd ${{ env.REMOTE_DIR }}
-            bash scripts/deploy.sh docker-compose.prod.yml .env
-
-      - name: Smoke (remote)
-        uses: appleboy/ssh-action@v1.2.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            cd ${{ env.REMOTE_DIR }}
-            bash scripts/smoke.sh
+      - run: echo "Secrets SSH détectés → réactive tes étapes SSH ici."
