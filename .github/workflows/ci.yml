@@ -8,7 +8,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
-      # on définit les 2 pour que Compose voie toujours API_IMAGE
+      # IMPORTANT : Compose lit ${API_IMAGE}. On le définit pour TOUTES les étapes.
       IMAGE_TAG: local/solar-flares-api:test
       API_IMAGE: local/solar-flares-api:test
 
@@ -41,14 +41,15 @@ jobs:
         run: |
           set -e
           docker compose -f docker-compose.ci.yml up -d mlflow
-          # attendre que le serveur réponde (max ~240s)
+          # attendre MLflow (max ~240s) et échouer si KO
           for i in {1..120}; do
             if curl -sf http://localhost:5000/ >/dev/null; then
               echo "MLflow ready"; break
             fi
             sleep 2
             if [ $i -eq 120 ]; then
-              echo "MLflow not ready"; docker compose -f docker-compose.ci.yml logs mlflow || true
+              echo "MLflow not ready in time"
+              docker compose -f docker-compose.ci.yml logs mlflow || true
               exit 1
             fi
           done
@@ -62,7 +63,7 @@ jobs:
         run: |
           set -e
           docker compose -f docker-compose.ci.yml up -d api
-          # attendre /ready (max ~240s) et échouer si jamais prêt
+          # attendre /ready (max ~240s) et échouer si KO
           for i in {1..120}; do
             if curl -sf http://localhost:8000/ready >/dev/null; then
               echo "API ready"; break
