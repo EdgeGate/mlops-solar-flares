@@ -122,6 +122,20 @@ curl -X POST http://localhost:8000/predict \
 * **Airflow** : suivi DAG ingestion et entraînement
 
 ---
+### Vérification de cohérence (script de distribution des classes)
+
+Le script `last_12h_class_distribution.py` permet de vérifier la répartition des classes solaires (A, B, C, M, X) dans les dernières heures à partir des données `xrs_clean.parquet`.
+
+⚠️ **Important** :  
+Ce script doit être exécuté dans la fenêtre de **5 minutes qui suit l’exécution du DAG `xrs_clean`** et **avant l’exécution du DAG `ml_x_ray_sensor`**.  
+Cela garantit que les observations utilisées sont bien alignées temporellement avec les données que consommera ensuite le modèle ML.
+
+Il sert donc d’outil de contrôle rapide pour comparer la qualité/précision des prédictions récentes.
+
+```bash
+python utils/last_12h_class_distribution.py --file data/xrs_clean.parquet --hours 12
+```
+---
 
 ## 🚨 Maintenance & Support
 
@@ -137,3 +151,5 @@ curl -X POST http://localhost:8000/predict \
   ```bash
   curl http://localhost:8000/model-info
   ```
+
+
