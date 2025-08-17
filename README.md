@@ -130,7 +130,7 @@ Le script `last_12h_class_distribution.py` permet de vérifier la répartition d
 Ce script doit être exécuté dans la fenêtre de **5 minutes qui suit l’exécution du DAG `xrs_clean`** et **avant l’exécution du DAG `ml_x_ray_sensor`**.  
 Cela garantit que les observations utilisées sont bien alignées temporellement avec les données que consommera ensuite le modèle ML.
 
-Il sert donc d’outil de contrôle rapide pour comparer la qualité/précision des prédictions récentes.
+Il sert donc d’outil de contrôle rapide pour comparer la qualité/précision des prédictions récentes via la cellule [15] de ml_x_ray_sensor_generated.
 
 ```bash
 python utils/last_12h_class_distribution.py --file data/xrs_clean.parquet --hours 12
@@ -151,5 +151,6 @@ python utils/last_12h_class_distribution.py --file data/xrs_clean.parquet --hour
   ```bash
   curl http://localhost:8000/model-info
   ```
+
 
 
